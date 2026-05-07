@@ -1,0 +1,3211 @@
+[
+  {
+    "fsn": null,
+    "equipment_id": "6530-031-0005-21",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "ตู้",
+      "ตู้เก็บเอกสาร",
+      "ตู้ใส่เอกสาร",
+      "ตู้สำนักงาน",
+      "ตู้เอกสาร"
+    ],
+    "name": "ตู้เอนกประสงค์ (ตู้ข้างเตียง)",
+    "location": "กายภาพบำบัด",
+    "responsible": "กายภาพบำบัด",
+    "brand": null,
+    "model": "ตู้ข้างเตียง CLOE 60*42*56 CM",
+    "unit_price": 2190.0,
+    "unit": "ตัว",
+    "received_date": "16/3/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201125960011",
+    "equipment_id": "110000012876",
+    "gf_id": "110000012876",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องถ่ายภาพนิ่งระบบดิจิทัล",
+      "ชุดกล้องถ่ายรูปถ่ายวีดีโอ DSLR",
+      "กล้องถ่ายภาพระบบดิจิตอล พร้อมชุดอุปกรณ์เสริม",
+      "กล้องดิจิตอล",
+      "กล้องถ่ายภาพวีดีโอ",
+      "กล้องดิจิตอลมิเรส พร้อมวัสดุอุปกรณ์เสริม",
+      "กล้องถ่ายรูป",
+      "กล้องถ่ายภาพ ระบบดิจิตอล",
+      "กล้องถ่ายภาพนิ่งและวิดีโอ",
+      "กล้องดิจิทัล พร้อมเลนส์",
+      "กล้องถ่ายภาพนิ่ง"
+    ],
+    "name": "กล้องถ่ายภาพพร้อมอุปกรณ์",
+    "location": "สื่อสารสุขภาพและสารสนเทศ",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "NIKON Z6III",
+    "model": null,
+    "unit_price": 200000.0,
+    "unit": "ชุด",
+    "received_date": "2/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-001-0003-009/69",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องดักยุง"
+    ],
+    "name": "เครื่องดักยุง",
+    "location": "ฟิตเนส",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "NT",
+    "model": "IK888-38W",
+    "unit_price": 1200.0,
+    "unit": "เครื่อง",
+    "received_date": "23/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-001-0003-010/69",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องดักยุง"
+    ],
+    "name": "เครื่องดักยุง",
+    "location": "ฟิตเนส",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "NT",
+    "model": "IK888-38W",
+    "unit_price": 1200.0,
+    "unit": "เครื่อง",
+    "received_date": "24/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-001-0003-011/69",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องดักยุง"
+    ],
+    "name": "เครื่องดักยุง",
+    "location": "ฟิตเนส",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "NT",
+    "model": "IK888-38W",
+    "unit_price": 1200.0,
+    "unit": "เครื่อง",
+    "received_date": "25/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-001-0003-012/69",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องดักยุง"
+    ],
+    "name": "เครื่องดักยุง",
+    "location": "ฟิตเนส",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "NT",
+    "model": "IK888-38W",
+    "unit_price": 1200.0,
+    "unit": "เครื่อง",
+    "received_date": "26/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-001-0003-013/69",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องดักยุง"
+    ],
+    "name": "เครื่องดักยุง",
+    "location": "ฟิตเนส",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "NT",
+    "model": "IK888-38W",
+    "unit_price": 1200.0,
+    "unit": "เครื่อง",
+    "received_date": "27/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-001-0003-014/69",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องดักยุง"
+    ],
+    "name": "เครื่องดักยุง",
+    "location": "ฟิตเนส",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "NT",
+    "model": "IK888-38W",
+    "unit_price": 1200.0,
+    "unit": "เครื่อง",
+    "received_date": "28/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201052310082",
+    "equipment_id": "110000012875",
+    "gf_id": "110000012875",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องโทรศัพท์เคลื่อนที่แบบมือถือ",
+      "เครื่องโทรศัพท์เคลื่อนที่"
+    ],
+    "name": "โทรศัพท์สมาร์ทโฟน",
+    "location": "กลุ่มการพยาบาล",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "REALME",
+    "model": "C85+256GB",
+    "unit_price": 10000.0,
+    "unit": "เครื่อง",
+    "received_date": "5/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "3920-007-0004-006",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "รถเข็น"
+    ],
+    "name": "รถเข็นเด็กอ่อน",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": null,
+    "model": null,
+    "unit_price": 3000.0,
+    "unit": "คัน",
+    "received_date": "22/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0031-058",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้เด็ก"
+    ],
+    "name": "เก้าอี้โยกเด็กอ่อน",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": null,
+    "model": null,
+    "unit_price": 2500.0,
+    "unit": "ตัว",
+    "received_date": "22/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000010157",
+    "gf_id": "110000010157",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องปั่นน้ำผลไม้"
+    ],
+    "name": "เครื่องปั่นผลไม้",
+    "location": "LM",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "minimax",
+    "model": "Super Blend MCB1",
+    "unit_price": 13890.0,
+    "unit": "เครื่อง",
+    "received_date": "5/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-001-0003-008/69",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เตาแก๊ส",
+      "เตาแก๊สประกอบอาหาร"
+    ],
+    "name": "เตาแก๊ส 2 หัว",
+    "location": "คลินิกแพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": "LUKKY FLAME",
+    "model": null,
+    "unit_price": 3890.0,
+    "unit": "ชุด",
+    "received_date": "5/2/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012029210001",
+    "equipment_id": "110000010697",
+    "gf_id": "110000010697",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "ตู้แช่เย็นทางการแพทย์"
+    ],
+    "name": "ตู้แช่น้ำยา (Medical refrigerator Pharmacy)",
+    "location": "กลุ่มชันสูตร แลป",
+    "responsible": "กลุ่มชันสูตร แลป",
+    "brand": "Licc Product",
+    "model": null,
+    "unit_price": 40000.0,
+    "unit": "ตู้",
+    "received_date": "15/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201209110001",
+    "equipment_id": "110000010693",
+    "gf_id": "110000010693",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องปั่นหมุนเหวี่ยงให้ตกตะกอน",
+      "เครื่องปั่นตกตะกอนปรับความเย็น",
+      "เครื่องปั่นตกตะกอนความเร็วสูงแบบควบคุมอุณหภูมิ",
+      "เครื่องปั่นสารตกตะกอนขนาดเล็ก",
+      "เครื่องปั่นเหวี่ยงชนิดตั้งโต๊ะ",
+      "เครื่องปั่นตกตะกอน",
+      "เครื่องปั่นเหวี่ยงตกตะกอน",
+      "เครื่องปั่นสารให้ตกตะกอน"
+    ],
+    "name": "เครื่องปั่นเหวี่ยง Serofuge centrifuge Blood Bank",
+    "location": "กลุ่มชันสูตร แลป",
+    "responsible": "กลุ่มชันสูตร แลป",
+    "brand": "Licc Product",
+    "model": "BB-C12",
+    "unit_price": 130000.0,
+    "unit": "เครื่อง",
+    "received_date": "15/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012027500001",
+    "equipment_id": "110000010157",
+    "gf_id": "110000010157",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "ตู้เก็บเวชภัณฑ์พร้อมระบบสัญญาณเสียงเตือนอัตโนมัติ",
+      "ตู้เย็นเก็บเวชภัณฑ์",
+      "ตู้เย็นเก็บวัคซีน"
+    ],
+    "name": "ตู้เย็นควบคุมอุณหภูมิ",
+    "location": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": "medicool",
+    "model": null,
+    "unit_price": 147700.0,
+    "unit": "เครื่อง",
+    "received_date": "30/10/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32013129590001",
+    "equipment_id": "110000010156",
+    "gf_id": "110000010156",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สนาม",
+    "tags": [
+      "เต้นท์ผ้าใบ",
+      "เต้นท์โครงเหล็ก"
+    ],
+    "name": "เครื่องเล่นสนามกลางแจ้งส่งเสริมพัฒนาการเด็กปฐมวัย",
+    "location": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": null,
+    "model": null,
+    "unit_price": 400000.0,
+    "unit": "หลัง",
+    "received_date": "27/10/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201052630365",
+    "equipment_id": "110000010162",
+    "gf_id": "110000010162",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศฝังฝ้า",
+      "เครื่องปรับอากาศชนิดซ่อนฝ้า",
+      "เครื่องปรับอากาศแบบติดผนัง",
+      "เครื่องปรับอากาศแบบแยกส่วน"
+    ],
+    "name": "เครื่องปรับอากาศแบบแยกส่วน ชนิดแขวน ขนาด 36000 BTU",
+    "location": "ห้องประชุมทับทิมสยาม",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "CARRIER",
+    "model": null,
+    "unit_price": 45500.0,
+    "unit": "เครื่อง",
+    "received_date": "16/10/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201052630364",
+    "equipment_id": "110000010161",
+    "gf_id": "110000010161",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศฝังฝ้า",
+      "เครื่องปรับอากาศชนิดซ่อนฝ้า",
+      "เครื่องปรับอากาศแบบติดผนัง",
+      "เครื่องปรับอากาศแบบแยกส่วน"
+    ],
+    "name": "เครื่องปรับอากาศแบบแยกส่วน ชนิดแขวน ขนาด 36000 BTU",
+    "location": "ห้องประชุมทับทิมสยาม",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "CARRIER",
+    "model": null,
+    "unit_price": 45500.0,
+    "unit": "เครื่อง",
+    "received_date": "16/10/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201052630363",
+    "equipment_id": "110000010160",
+    "gf_id": "110000010160",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศฝังฝ้า",
+      "เครื่องปรับอากาศชนิดซ่อนฝ้า",
+      "เครื่องปรับอากาศแบบติดผนัง",
+      "เครื่องปรับอากาศแบบแยกส่วน"
+    ],
+    "name": "เครื่องปรับอากาศแบบแยกส่วน ชนิดแขวน ขนาด 36000 BTU",
+    "location": "ห้องประชุมทับทิมสยาม",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "CARRIER",
+    "model": null,
+    "unit_price": 45500.0,
+    "unit": "เครื่อง",
+    "received_date": "16/10/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201052630362",
+    "equipment_id": "110000010159",
+    "gf_id": "110000010159",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศฝังฝ้า",
+      "เครื่องปรับอากาศชนิดซ่อนฝ้า",
+      "เครื่องปรับอากาศแบบติดผนัง",
+      "เครื่องปรับอากาศแบบแยกส่วน"
+    ],
+    "name": "เครื่องปรับอากาศแบบแยกส่วน ชนิดแขวน ขนาด 36000 BTU",
+    "location": "ห้องประชุมทับทิมสยาม",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "CARRIER",
+    "model": null,
+    "unit_price": 45500.0,
+    "unit": "เครื่อง",
+    "received_date": "16/10/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012014810002",
+    "equipment_id": "110000010148",
+    "gf_id": "110000010148",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องตรวจวัดคุณภาพเสียงเบื้องต้น"
+    ],
+    "name": "เครื่องเปรียบเทียบเสียงสำหรับเครื่องวัดเสียง",
+    "location": "กลุ่มสิ่งแวดล้อม",
+    "responsible": "กลุ่มอนามัยสิ่งแวดล้อม",
+    "brand": null,
+    "model": null,
+    "unit_price": 50000.0,
+    "unit": "เครื่อง",
+    "received_date": "6/10/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201051720007",
+    "equipment_id": "110000010690",
+    "gf_id": "110000010690",
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องฟอกอากาศแบบติดเพดาน",
+      "เครื่องฟอกอากาศแบบเคลื่อนย้าย",
+      "เครื่องฟอกอากาศ"
+    ],
+    "name": "เครื่องฟอกอากาศ",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": null,
+    "model": null,
+    "unit_price": 15000.0,
+    "unit": "เครื่อง",
+    "received_date": "13/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201137060004",
+    "equipment_id": "3750-002-0005-010",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องตัดหญ้าแบบสะพาย"
+    ],
+    "name": "เครื่องตัดหญ้า",
+    "location": "งานอาคารสถานที่",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": null,
+    "model": "4 จังหวะ UMK435T",
+    "unit_price": 8763.0,
+    "unit": "เครื่อง",
+    "received_date": "29/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201137060004",
+    "equipment_id": "3750-002-0005-011",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องตัดหญ้าแบบสะพาย"
+    ],
+    "name": "เครื่องตัดหญ้า",
+    "location": "งานอาคารสถานที่",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": null,
+    "model": "4 จังหวะ UMK435T",
+    "unit_price": 8763.0,
+    "unit": "เครื่อง",
+    "received_date": "29/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201137060004",
+    "equipment_id": "3750-002-0005-012",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องตัดหญ้าแบบสะพาย"
+    ],
+    "name": "เครื่องตัดหญ้า",
+    "location": "งานอาคารสถานที่",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": null,
+    "model": "4 จังหวะ UMK435T",
+    "unit_price": 8763.0,
+    "unit": "เครื่อง",
+    "received_date": "29/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012725410001",
+    "equipment_id": "4520-001-0002-022",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "ถังต้มน้ำไฟฟ้า"
+    ],
+    "name": "ถังต้มน้ำไฟฟ้า",
+    "location": "คลินิกแพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": null,
+    "model": null,
+    "unit_price": 4012.5,
+    "unit": "ใบ",
+    "received_date": "5/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-002-0005-005",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "กระทะไฟฟ้าเคลือบ"
+    ],
+    "name": "หม้อนึ่งลูกประคบ",
+    "location": "คลินิกแพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": "ลังถึง",
+    "model": null,
+    "unit_price": 1583.6,
+    "unit": "เครื่อง",
+    "received_date": "5/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7330-002-0005-006",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "กระทะไฟฟ้าเคลือบ"
+    ],
+    "name": "หม้อนึ่งลูกประคบ",
+    "location": "คลินิกแพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": "ลังถึง",
+    "model": null,
+    "unit_price": 1583.6,
+    "unit": "เครื่อง",
+    "received_date": "5/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012725060074",
+    "equipment_id": "4520-001-0002-032",
+    "gf_id": null,
+    "fiscal_year": "2569",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "กระติกน้ำร้อน"
+    ],
+    "name": "กระติกน้ำร้อน",
+    "location": "คลินิกแพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": null,
+    "model": null,
+    "unit_price": 1123.5,
+    "unit": "ตัว",
+    "received_date": "5/1/2569",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000003102",
+    "gf_id": "110000003102",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์ก่อสร้าง",
+    "tags": [
+      "เลื่อยวงเดือนไฟฟ้า"
+    ],
+    "name": "เลื่อยไฟฟ้า",
+    "location": "งานอาคารสถานที่",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": null,
+    "model": null,
+    "unit_price": 14873.0,
+    "unit": "เครื่อง",
+    "received_date": "25/1/2567",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-088",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1023",
+    "unit_price": 3400.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-089",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1023",
+    "unit_price": 3400.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-090",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1023",
+    "unit_price": 3400.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-091",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1023",
+    "unit_price": 3400.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-092",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1023",
+    "unit_price": 3400.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-093",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-094",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-095",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-096",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-097",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-098",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-099",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-100",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-101",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-102",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "กลุ่มอำนวยการ",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6710-005-0002-103",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "กล้องวงจรปิด"
+    ],
+    "name": "กล้องวงจรปิด",
+    "location": "กลุ่มอำนวยการ",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "Hikvision",
+    "model": "DS-2CD1024",
+    "unit_price": 3450.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-469",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "กลุ่มอำนวยการ ธุรการ",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-468",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-467",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-466",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-465",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "กลุ่มอำนวยการ ธุรการ",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-464",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "กลุ่มอนามัยวัยเรียน",
+    "responsible": "กลุ่มอนามัยวัยเรียน",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-463",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "กลุ่มอนามัยวัยเรียน",
+    "responsible": "กลุ่มอนามัยวัยเรียน",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-462",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "กลุ่มอนามัยวัยเรียน",
+    "responsible": "กลุ่มอนามัยวัยเรียน",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-461",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "กลุ่มอนามัยวัยเรียน",
+    "responsible": "กลุ่มอนามัยวัยเรียน",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-460",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "กลุ่มอนามัยวัยเรียน",
+    "responsible": "กลุ่มอนามัยวัยเรียน",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-459",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "งานวิจัย",
+    "responsible": "กลุ่มวิชาการ วิจัยและสนับสนุนศูนย์เขต",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-458",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "งานวิจัย",
+    "responsible": "กลุ่มวิชาการ วิจัยและสนับสนุนศูนย์เขต",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-457",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "งานวิจัย",
+    "responsible": "กลุ่มวิชาการ วิจัยและสนับสนุนศูนย์เขต",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-456",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "ศูนย์ฝึกอบรม",
+    "responsible": "กลุ่มฝึกอบรม",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-455",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "ศูนย์ฝึกอบรม",
+    "responsible": "กลุ่มฝึกอบรม",
+    "brand": "เก้าอี้ทำงานบุนวม ปรับประดับ",
+    "model": null,
+    "unit_price": 1890.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-454",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-453",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-452",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-451",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-450",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-449",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-448",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ทำงาน"
+    ],
+    "name": "เก้าอี้ทำงาน",
+    "location": "ศูนย์ฝึกอบรม กัญญานัท",
+    "responsible": "กลุ่มฝึกอบรม",
+    "brand": "เก้าอี้บุนวม",
+    "model": null,
+    "unit_price": 3590.0,
+    "unit": "ตัว",
+    "received_date": "8/7/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-447",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-446",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-445",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-444",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-443",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "แพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0021-442",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ",
+    "location": "แพทย์แผนไทย",
+    "responsible": "กลุ่มเภสัชกรรมและแพทย์แผนไทย",
+    "brand": "เก้าอี้สีเทา ไม่มีล้อ",
+    "model": null,
+    "unit_price": 760.0,
+    "unit": "ตัว",
+    "received_date": "16/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-030",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีเหลือง",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-029",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีเหลือง",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-028",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีเหลือง",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-027",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีเหลือง",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-026",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-025",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-024",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-023",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-022",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-021",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-020",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-019",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-018",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-017",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-016",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-015",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-014",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-013",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-012",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-011",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-010",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-009",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-008",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-007",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-006",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-005",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-004",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-003",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-002",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7110-006-0035-001",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เก้าอี้ผู้รับบริการ"
+    ],
+    "name": "เก้าอี้ผู้รับบริการ (โชฟา)",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "สีครีม",
+    "model": null,
+    "unit_price": 3490.0,
+    "unit": "ตัว",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012010960001",
+    "equipment_id": "110000009665",
+    "gf_id": "110000009665",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องทำความสะอาดระบบอุลตร้าโซนิค"
+    ],
+    "name": "เครื่อง UV ทำความสะอาดเครื่องมือแพทย์",
+    "location": "หน่วยจ่ายกลาง",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": null,
+    "model": null,
+    "unit_price": 26000.0,
+    "unit": "เครื่อง",
+    "received_date": "24/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012724400016",
+    "equipment_id": "110000009887",
+    "gf_id": "110000009887",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์งานบ้านงานครัว",
+    "tags": [
+      "เครื่องกรองน้ำดื่ม",
+      "เครื่องกรองน้ำ"
+    ],
+    "name": "เครื่องกรองน้ำ ระบบ RO",
+    "location": "หน่วยจ่ายกลาง",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": null,
+    "model": "ระบบ RO",
+    "unit_price": 90000.0,
+    "unit": "เครื่อง",
+    "received_date": "4/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050137",
+    "equipment_id": "110000008914",
+    "gf_id": "110000008914",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050154",
+    "equipment_id": "110000008915",
+    "gf_id": "110000008915",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050155",
+    "equipment_id": "110000008916",
+    "gf_id": "110000008916",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050156",
+    "equipment_id": "110000008917",
+    "gf_id": "110000008917",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050152",
+    "equipment_id": "110000008918",
+    "gf_id": "110000008918",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050153",
+    "equipment_id": "110000008919",
+    "gf_id": "110000008919",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050138",
+    "equipment_id": "110000008920",
+    "gf_id": "110000008920",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050139",
+    "equipment_id": "110000008921",
+    "gf_id": "110000008921",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050140",
+    "equipment_id": "110000008922",
+    "gf_id": "110000008922",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050141",
+    "equipment_id": "110000008923",
+    "gf_id": "110000008923",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050142",
+    "equipment_id": "110000008924",
+    "gf_id": "110000008924",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050143",
+    "equipment_id": "110000008925",
+    "gf_id": "110000008925",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050144",
+    "equipment_id": "110000008926",
+    "gf_id": "110000008926",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050145",
+    "equipment_id": "110000008927",
+    "gf_id": "110000008927",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050146",
+    "equipment_id": "110000008928",
+    "gf_id": "110000008928",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050147",
+    "equipment_id": "110000008929",
+    "gf_id": "110000008929",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050148",
+    "equipment_id": "110000008930",
+    "gf_id": "110000008930",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050151",
+    "equipment_id": "110000008931",
+    "gf_id": "110000008931",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050149",
+    "equipment_id": "110000008932",
+    "gf_id": "110000008932",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012223050150",
+    "equipment_id": "110000008933",
+    "gf_id": "110000008933",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์โน้ตบุ๊ก",
+      "คอมพิวเตอร์โน๊ตบุ๊ก"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แบบพกพา",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "HP",
+    "model": "255G10",
+    "unit_price": 19000.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012222720178",
+    "equipment_id": "110000008709",
+    "gf_id": "110000008709",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์แบบตั้งโต๊ะ",
+      "เครื่องคอมพิวเตอร์แม่ข่าย"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แม่ข่าย แบบที่ 1",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": null,
+    "model": null,
+    "unit_price": 124500.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012222720179",
+    "equipment_id": "110000008710",
+    "gf_id": "110000008710",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องคอมพิวเตอร์แบบตั้งโต๊ะ",
+      "เครื่องคอมพิวเตอร์แม่ข่าย"
+    ],
+    "name": "เครื่องคอมพิวเตอร์แม่ข่าย แบบที่ 1",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": null,
+    "model": null,
+    "unit_price": 124500.0,
+    "unit": "เครื่อง",
+    "received_date": "31/1/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6520-002-0022-016",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนัก"
+    ],
+    "name": "เครื่องชั่งน้ำหนัก",
+    "location": "กลุ่มวัยรุ่น",
+    "responsible": "กลุ่มอนามัยวัยรุ่นและวัยเจริญพันธ์",
+    "brand": "OMRON",
+    "model": "HN-300T2",
+    "unit_price": 1400.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-023",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนักเด็กทารก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักเด็กทารก ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 3850.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-024",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนักเด็กทารก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักเด็กทารก ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 3850.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-025",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนักเด็กทารก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักเด็กทารก ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 3850.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-026",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนักเด็กทารก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักเด็กทารก ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 3850.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-027",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนักเด็กทารก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักเด็กทารก ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 3850.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-028",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนักเด็กทารก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักเด็กทารก ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 3850.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-029",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนัก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักบุคคล ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 1000.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-030",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนัก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักบุคคล ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 1000.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-031",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนัก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักบุคคล ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 1000.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-032",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนัก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักบุคคล ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 1000.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-033",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนัก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักบุคคล ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 1000.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6530-009-0004-034",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องชั่งน้ำหนัก"
+    ],
+    "name": "เครื่องชั่งน้ำหนักบุคคล ระบบดิจิตอล",
+    "location": "กลุ่มอนามัยแม่และเด็ก",
+    "responsible": "กลุ่มอนามัยแม่และเด็ก",
+    "brand": null,
+    "model": null,
+    "unit_price": 1000.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201209080001",
+    "equipment_id": "110000006630",
+    "gf_id": "110000006630",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องตรวจการได้ยิน"
+    ],
+    "name": "เครื่องตรวจการได้ยินแบบคัดกรอง",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "grason-stadler",
+    "model": "GSI18",
+    "unit_price": 98000.0,
+    "unit": "เครื่อง",
+    "received_date": "24/10/2567",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6515-022-3102-001",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องตรวจความเค็ม"
+    ],
+    "name": "เครื่องตรวจความเค็ม",
+    "location": "LM",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": null,
+    "model": null,
+    "unit_price": 2500.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "6515-022-3103-001",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องตรวจความหวาน"
+    ],
+    "name": "เครื่องตรวจความหวาน",
+    "location": "LM",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": null,
+    "model": null,
+    "unit_price": 2500.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012015610001",
+    "equipment_id": "110000006635",
+    "gf_id": "110000006635",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องตรวจการเต้นของหัวใจทารกในครรภ์"
+    ],
+    "name": "เครื่องตรวจประเมินสุขภาพในครรภ์",
+    "location": "คลินิกฝากครรภ์",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "bistos",
+    "model": "BT-350",
+    "unit_price": 350000.0,
+    "unit": "เครื่อง",
+    "received_date": "29/10/2567",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201209080002",
+    "equipment_id": "110000009198",
+    "gf_id": "110000009198",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องตรวจวินิจฉัยทางการแพทย์โดยใช้คลื่นเสียงความถี่สูง"
+    ],
+    "name": "เครื่องตรวจอัลตราซาวด์",
+    "location": "LM",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "medisano",
+    "model": "P12 Plus",
+    "unit_price": 920000.0,
+    "unit": "เครื่อง",
+    "received_date": "14/2/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012015270028",
+    "equipment_id": "110000006893",
+    "gf_id": "110000006893",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องนึ่งฆ่าเชื้อโรคด้วยไอน้ำ",
+      "เครื่องนึ่งฆ่าเชื้อจุลินทรีย์ด้วยไอน้ำ"
+    ],
+    "name": "เครื่องนึ่งฆ่าเชื้อจุลินทรีย์ด้วยไอน้ำ",
+    "location": "หน่วยจ่ายกลาง",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "namiwat",
+    "model": null,
+    "unit_price": 560000.0,
+    "unit": "เครื่อง",
+    "received_date": "4/12/2567",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32011229630003",
+    "equipment_id": "110000006886",
+    "gf_id": "110000006886",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์โฆษณาและเผยแพร่",
+    "tags": [
+      "เครื่องบันทึกภาพกล้องวงจรปิด"
+    ],
+    "name": "เครื่องบันทึกภาพ CCTV",
+    "location": "EF",
+    "responsible": "ศูนย์พัฒนาการเด็กปฐมวัย(EF)",
+    "brand": null,
+    "model": null,
+    "unit_price": 12500.0,
+    "unit": "ชุด",
+    "received_date": "4/12/2567",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201052630354",
+    "equipment_id": "110000009541",
+    "gf_id": "110000009541",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศแบบติดผนัง"
+    ],
+    "name": "เครื่องปรับอากาศ 9000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "CARRIER",
+    "model": "9000 BTU",
+    "unit_price": 14500.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000009542",
+    "gf_id": "110000009542",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศแบบติดผนัง"
+    ],
+    "name": "เครื่องปรับอากาศ 9000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "CARRIER",
+    "model": "9000 BTU",
+    "unit_price": 14500.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000009543",
+    "gf_id": "110000009543",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศแบบติดผนัง"
+    ],
+    "name": "เครื่องปรับอากาศ 9000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "CARRIER",
+    "model": "9000 BTU",
+    "unit_price": 14500.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000009544",
+    "gf_id": "110000009544",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศแบบติดผนัง"
+    ],
+    "name": "เครื่องปรับอากาศ 9000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "CARRIER",
+    "model": "9000 BTU",
+    "unit_price": 14500.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201052630358",
+    "equipment_id": "110000009545",
+    "gf_id": "110000009545",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศชนิดแขวนใต้ฝ้าเพดาน"
+    ],
+    "name": "เครื่องปรับอากาศ 36000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "YORK",
+    "model": "36000 BTU",
+    "unit_price": 54000.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000009546",
+    "gf_id": "110000009546",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศชนิดแขวนใต้ฝ้าเพดาน"
+    ],
+    "name": "เครื่องปรับอากาศ 36000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "YORK",
+    "model": "36000 BTU",
+    "unit_price": 54000.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000009547",
+    "gf_id": "110000009547",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศชนิดแขวนใต้ฝ้าเพดาน"
+    ],
+    "name": "เครื่องปรับอากาศ 36000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "YORK",
+    "model": "36000 BTU",
+    "unit_price": 54000.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "110000009548",
+    "gf_id": "110000009548",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์สำนักงาน",
+    "tags": [
+      "เครื่องปรับอากาศแบบแยกส่วน",
+      "เครื่องปรับอากาศชนิดแขวนใต้ฝ้าเพดาน"
+    ],
+    "name": "เครื่องปรับอากาศ 36000 BTU",
+    "location": "โอพีดี",
+    "responsible": "กลุ่มการพยาบาล",
+    "brand": "YORK",
+    "model": "36000 BTU",
+    "unit_price": 54000.0,
+    "unit": "เครื่อง",
+    "received_date": "4/6/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201137000033",
+    "equipment_id": "110000010008",
+    "gf_id": "110000010008",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์การเกษตร เครื่องมือและอุปกรณ์",
+    "tags": [
+      "ปั๊มน้ำ",
+      "เครื่องปั๊มน้ำอัตโนมัติ"
+    ],
+    "name": "เครื่องปั๊มน้ำคลอรีน",
+    "location": "ระบบประปา",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": null,
+    "model": null,
+    "unit_price": 20000.0,
+    "unit": "เครื่อง",
+    "received_date": "5/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "3201137000034",
+    "equipment_id": "110000010009",
+    "gf_id": "110000010009",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์การเกษตร เครื่องมือและอุปกรณ์",
+    "tags": [
+      "ปั๊มน้ำ",
+      "เครื่องปั๊มน้ำอัตโนมัติ"
+    ],
+    "name": "เครื่องปั๊มน้ำคลอรีน",
+    "location": "ระบบบำบัดน้ำเสีย",
+    "responsible": "กลุ่มอำนวยการ",
+    "brand": null,
+    "model": null,
+    "unit_price": 20000.0,
+    "unit": "เครื่อง",
+    "received_date": "5/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": "32012015110002",
+    "equipment_id": "110000010007",
+    "gf_id": "110000010007",
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์วิทยาศาสตร์และการแพทย์",
+    "tags": [
+      "เครื่องแปลงสัญญาณภาพ X-Ray เป็นระบบดิจิตอล"
+    ],
+    "name": "เครื่องแปลงสัญญาณเอ็กซเรย์ในช่องปาก",
+    "location": "คลินิกทันตกรรม",
+    "responsible": "กลุ่มทันตสาธารณสุข",
+    "brand": null,
+    "model": null,
+    "unit_price": 400000.0,
+    "unit": "เครื่อง",
+    "received_date": "22/8/2568",
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7440-014-0003-76",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องพิมพ์คอมพิวเตอร์"
+    ],
+    "name": "เครื่องพิมพ์เลเซอร์ขาวดำ",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "Pantum",
+    "model": "BP2300W",
+    "unit_price": 3300.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7440-014-0003-77",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องพิมพ์คอมพิวเตอร์"
+    ],
+    "name": "เครื่องพิมพ์เลเซอร์ขาวดำ",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "Pantum",
+    "model": "BP2300W",
+    "unit_price": 3300.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7440-014-0003-78",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องพิมพ์คอมพิวเตอร์"
+    ],
+    "name": "เครื่องพิมพ์เลเซอร์ขาวดำ",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "Pantum",
+    "model": "BP2300W",
+    "unit_price": 3300.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7440-014-0003-79",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องพิมพ์คอมพิวเตอร์"
+    ],
+    "name": "เครื่องพิมพ์เลเซอร์ขาวดำ",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "Pantum",
+    "model": "BP2300W",
+    "unit_price": 3300.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  },
+  {
+    "fsn": null,
+    "equipment_id": "7440-014-0003-80",
+    "gf_id": null,
+    "fiscal_year": "2568",
+    "category": "ครุภัณฑ์คอมพิวเตอร์",
+    "tags": [
+      "เครื่องพิมพ์คอมพิวเตอร์"
+    ],
+    "name": "เครื่องพิมพ์เลเซอร์ขาวดำ Network",
+    "location": "สื่อสาร ไอที",
+    "responsible": "กลุ่มสื่อสาร ไอที",
+    "brand": "Pantum",
+    "model": "B3010DW",
+    "unit_price": 8900.0,
+    "unit": "เครื่อง",
+    "received_date": null,
+    "status": "ปกติ"
+  }
+]
