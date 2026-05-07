@@ -1,45 +1,60 @@
 // ============================================================
-// Google Apps Script – ระบบทะเบียนครุภัณฑ์ + คลังสื่อ
-// Spreadsheet ID: 12t737wkzyAW9UVUlN4XJS9UpGUdn3b5GdO2tMiJKA0A
+// ระบบทะเบียนครุภัณฑ์ + คลังสื่อ — Google Apps Script
+// Spreadsheet : 12t737wkzyAW9UVUlN4XJS9UpGUdn3b5GdO2tMiJKA0A
+// Equipment GID: 1500564948
 // ============================================================
 
-const SS_ID      = "12t737wkzyAW9UVUlN4XJS9UpGUdn3b5GdO2tMiJKA0A";
-const EQUIP_TAB  = "ท.คุมนอกระบบGF+AMS";
-const MEDIA_TAB  = "คลังสื่อ";
-const IN_TAB     = "รับเข้า";
-const OUT_TAB    = "จ่ายออก";
+const SS_ID     = "12t737wkzyAW9UVUlN4XJS9UpGUdn3b5GdO2tMiJKA0A";
+const EQUIP_GID = 1500564948;   // sheet ID from original project
 
-const EQUIP_HEADERS = [
-  "ลำดับ", "รหัสครุภัณฑ์", "รหัส GF", "ปีงบประมาณ",
-  "ประเภท", "หมวด/ชนิด", "ชื่อครุภัณฑ์", "สถานที่ตั้ง",
-  "กลุ่มงานรับผิดชอบ", "ยี่ห้อ", "รุ่น/แบบ",
-  "ราคา/หน่วย", "หน่วย", "วันที่รับ", "สถานะ"
-];
+const MEDIA_TAB = "คลังสื่อ";
+const IN_TAB    = "รับเข้า";
+const OUT_TAB   = "จ่ายออก";
 
-const MEDIA_HEADERS = [
-  "รหัสสื่อ", "กลุ่มงาน", "ชื่อสื่อ", "หน่วย", "ลิงก์"
-];
+// Column names — must match row 1 of the equipment sheet exactly
+const C_FSN      = "เลขครุภัณฑ์ FSN";
+const C_ID       = "เลขครุภัณฑ์";
+const C_GF       = "เลขครุภัณฑ์ GF";
+const C_YEAR     = "ปีงบประมาณ";
+const C_TYPE     = "ประเภท";
+const C_CATEGORY = "หมวด/ชนิด";
+const C_NAME     = "ชื่อเรียก/คุณลักษณะครุภัณฑ์";
+const C_LOCATION = "สถานที่ใช้งาน";
+const C_OWNER    = "ผู้รับผิดชอบ";
+const C_BRAND    = "ยี่ห้อ";
+const C_MODEL    = "รุ่น";
+const C_PRICE    = "ราคาต่อหน่วย";
+const C_UNIT     = "หน่วยนับ";
+const C_DATE     = "วันที่รับเข้า";
+const C_STATUS   = "สถานะ";
 
-const IN_HEADERS = [
-  "วันที่", "เลขที่เอกสาร", "หมายเหตุ",
-  "รหัสสื่อ", "จำนวน", "สถานะ"
-];
+const MEDIA_HEADERS = ["รหัสสื่อ", "กลุ่มงาน", "ชื่อสื่อ", "หน่วย", "ลิงก์"];
+const IN_HEADERS    = ["วันที่", "เลขที่เอกสาร", "หมายเหตุ", "รหัสสื่อ", "จำนวน", "สถานะ"];
+const OUT_HEADERS   = ["วันที่", "เลขที่เอกสาร", "ผู้รับ", "หมายเหตุ", "รหัสสื่อ", "จำนวน", "สถานะ"];
 
-const OUT_HEADERS = [
-  "วันที่", "เลขที่เอกสาร", "ผู้รับ", "หมายเหตุ",
-  "รหัสสื่อ", "จำนวน", "สถานะ"
-];
-
-// ── entry point ────────────────────────────────────────────
+// ── entry point ──────────────────────────────────────────────
 function doGet() {
   return HtmlService.createHtmlOutputFromFile("index")
-    .setTitle("ระบบทะเบียนครุภัณฑ์ + คลังสื่อ")
+    .setTitle("ระบบทะเบียนครุภัณฑ์ + คลังสื่อ ศูนย์อนามัยที่ 10")
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
-// ── helpers ────────────────────────────────────────────────
+// ── helpers ──────────────────────────────────────────────────
 function ss_() {
   return SpreadsheetApp.openById(SS_ID);
+}
+
+function getEquipSheet_() {
+  const sheets = ss_().getSheets();
+  for (const sh of sheets) {
+    if (sh.getSheetId() === EQUIP_GID) return sh;
+  }
+  throw new Error("Equipment sheet GID " + EQUIP_GID + " not found");
+}
+
+function getHeaders_(sh) {
+  const row = sh.getRange(1, 1, 1, sh.getLastColumn()).getValues()[0];
+  return row.map(h => String(h).trim()).filter(h => h !== "");
 }
 
 function ensureSheet_(name, headers) {
@@ -64,56 +79,84 @@ function sheetData_(sh) {
   });
 }
 
+// Convert CE date → BE display string ("D/M/YYYY")
+// Applies +600 only when year is in the "Thai short year" range (1960–1975 CE = 2503–2518 BE)
 function dateStr_(v) {
-  if (!v || v === "") return "";
+  if (v === null || v === undefined || v === "") return "";
   if (v instanceof Date) {
-    const y = v.getFullYear();
+    const y  = v.getFullYear();
     const be = (y >= 1960 && y <= 1975) ? y + 600 : y;
     return `${v.getDate()}/${v.getMonth() + 1}/${be}`;
   }
   const s = String(v).trim();
+  // Handle string like "1968-07-17 00:00:00"
   const m = s.match(/^(1\d{3})-(\d{2})-(\d{2})/);
   if (m) {
-    const y = parseInt(m[1]);
+    const y  = parseInt(m[1]);
     const be = (y >= 1960 && y <= 1975) ? y + 600 : y;
     return `${parseInt(m[3])}/${parseInt(m[2])}/${be}`;
   }
   return s;
 }
 
-// ── EQUIPMENT ──────────────────────────────────────────────
-function getEquipment() {
-  const sh = ss_().getSheetByName(EQUIP_TAB);
-  if (!sh) return [];
-  return sheetData_(sh).map(r => ({
-    _row:         r._row,
-    fsn:          r["ลำดับ"],
-    equipment_id: r["รหัสครุภัณฑ์"],
-    gf_id:        r["รหัส GF"],
-    fiscal_year:  r["ปีงบประมาณ"],
-    category:     r["ประเภท"],
-    tags:         r["หมวด/ชนิด"],
-    name:         r["ชื่อครุภัณฑ์"],
-    location:     r["สถานที่ตั้ง"],
-    responsible:  r["กลุ่มงานรับผิดชอบ"],
-    brand:        r["ยี่ห้อ"],
-    model:        r["รุ่น/แบบ"],
-    unit_price:   r["ราคา/หน่วย"],
-    unit:         r["หน่วย"],
-    received_date: dateStr_(r["วันที่รับ"]),
-    status:       r["สถานะ"],
-  }));
+// ── EQUIPMENT — fast filter options (scan only 3 columns) ────
+// Returns years/locations/statuses for populating dropdowns,
+// plus latestYear so the client can default to it.
+function getFilterOptions() {
+  const sh      = getEquipSheet_();
+  const headers = getHeaders_(sh);
+  const lastRow = sh.getLastRow();
+  if (lastRow < 2) return { years: [], locations: [], statuses: [], latestYear: "" };
+
+  const iYear   = headers.indexOf(C_YEAR);
+  const iLoc    = headers.indexOf(C_LOCATION);
+  const iStatus = headers.indexOf(C_STATUS);
+  const maxCol  = Math.max(iYear, iLoc, iStatus) + 1;
+  const data    = sh.getRange(2, 1, lastRow - 1, maxCol).getValues();
+
+  const years = {}, locs = {}, statuses = {};
+  data.forEach(row => {
+    if (iYear   >= 0 && row[iYear])   years[String(row[iYear])]      = 1;
+    if (iLoc    >= 0 && row[iLoc])    locs[String(row[iLoc])]        = 1;
+    if (iStatus >= 0 && row[iStatus]) statuses[String(row[iStatus])] = 1;
+  });
+
+  const sortedYears = Object.keys(years).sort((a, b) => b - a);
+  return {
+    years:      sortedYears,
+    locations:  Object.keys(locs).sort(),
+    statuses:   Object.keys(statuses).sort(),
+    latestYear: sortedYears[0] || "",
+  };
 }
 
+// ── EQUIPMENT — read rows (server-side year filter) ──────────
+function getEquipment(yearFilter) {
+  const sh      = getEquipSheet_();
+  const headers = getHeaders_(sh);
+  const lastRow = sh.getLastRow();
+  if (lastRow < 2) return [];
+
+  const iYear = headers.indexOf(C_YEAR);
+  const data  = sh.getRange(2, 1, lastRow - 1, headers.length).getValues();
+
+  const rows = [];
+  data.forEach((row, idx) => {
+    if (yearFilter && iYear >= 0 && String(row[iYear]) !== String(yearFilter)) return;
+    const obj = { _row: idx + 2 };
+    headers.forEach((h, c) => {
+      obj[h] = (h === C_DATE) ? dateStr_(row[c]) : (row[c] ?? "");
+    });
+    rows.push(obj);
+  });
+  return rows;
+}
+
+// ── EQUIPMENT CRUD ───────────────────────────────────────────
 function saveEquipment(data, rowIndex) {
-  const sh = ss_().getSheetByName(EQUIP_TAB);
-  if (!sh) throw new Error("ไม่พบชีต " + EQUIP_TAB);
-  const row = [
-    data.fsn, data.equipment_id, data.gf_id, data.fiscal_year,
-    data.category, data.tags, data.name, data.location,
-    data.responsible, data.brand, data.model, data.unit_price,
-    data.unit, data.received_date, data.status
-  ];
+  const sh      = getEquipSheet_();
+  const headers = getHeaders_(sh);
+  const row     = headers.map(h => (data[h] !== undefined ? data[h] : ""));
   if (rowIndex) {
     sh.getRange(rowIndex, 1, 1, row.length).setValues([row]);
   } else {
@@ -123,47 +166,53 @@ function saveEquipment(data, rowIndex) {
 }
 
 function deleteEquipment(rowIndex) {
-  const sh = ss_().getSheetByName(EQUIP_TAB);
-  if (!sh) throw new Error("ไม่พบชีต " + EQUIP_TAB);
-  sh.deleteRow(rowIndex);
+  getEquipSheet_().deleteRow(rowIndex);
   return true;
 }
 
-// ── MEDIA ITEMS ────────────────────────────────────────────
+// ── EXPORT EXCEL ─────────────────────────────────────────────
+function exportEquipExcel() {
+  const url  = `https://docs.google.com/spreadsheets/d/${SS_ID}/export?format=xlsx&gid=${EQUIP_GID}`;
+  const resp = UrlFetchApp.fetch(url, {
+    headers:            { Authorization: `Bearer ${ScriptApp.getOAuthToken()}` },
+    muteHttpExceptions: true,
+  });
+  if (resp.getResponseCode() !== 200) {
+    throw new Error("Export failed: HTTP " + resp.getResponseCode());
+  }
+  return Utilities.base64Encode(resp.getContent());
+}
+
+// ── MEDIA ITEMS ──────────────────────────────────────────────
 function getMediaItems() {
   const mediaSh = ensureSheet_(MEDIA_TAB, MEDIA_HEADERS);
   const inSh    = ensureSheet_(IN_TAB,    IN_HEADERS);
   const outSh   = ensureSheet_(OUT_TAB,   OUT_HEADERS);
 
   const items = sheetData_(mediaSh).map(r => ({
-    _row:       r._row,
-    media_id:   r["รหัสสื่อ"],
-    group_raw:  r["กลุ่มงาน"],
-    name:       r["ชื่อสื่อ"],
-    unit:       r["หน่วย"],
-    link:       r["ลิงก์"],
+    _row:      r._row,
+    media_id:  r["รหัสสื่อ"],
+    group_raw: r["กลุ่มงาน"],
+    name:      r["ชื่อสื่อ"],
+    unit:      r["หน่วย"],
+    link:      r["ลิงก์"],
   }));
 
-  // aggregate stock-in
-  const inMap  = {};
+  const inMap = {}, outMap = {};
   sheetData_(inSh).forEach(r => {
     const code = r["รหัสสื่อ"], qty = Number(r["จำนวน"]) || 0;
-    const st   = String(r["สถานะ"] || "");
-    if (code && st !== "ยกเลิก") inMap[code] = (inMap[code] || 0) + qty;
+    if (code && String(r["สถานะ"] || "") !== "ยกเลิก")
+      inMap[code] = (inMap[code] || 0) + qty;
   });
-
-  // aggregate stock-out
-  const outMap = {};
   sheetData_(outSh).forEach(r => {
     const code = r["รหัสสื่อ"], qty = Number(r["จำนวน"]) || 0;
-    const st   = String(r["สถานะ"] || "");
-    if (code && st !== "ยกเลิก") outMap[code] = (outMap[code] || 0) + qty;
+    if (code && String(r["สถานะ"] || "") !== "ยกเลิก")
+      outMap[code] = (outMap[code] || 0) + qty;
   });
 
   return items.map(item => {
-    const mid  = item.media_id;
-    const recv = inMap[mid]  || 0;
-    const issu = outMap[mid] || 0;
+    const recv = inMap[item.media_id]  || 0;
+    const issu = outMap[item.media_id] || 0;
     const bal  = recv - issu;
     let status = "มีเหลือ";
     if (bal <= 0) status = "หมด";
@@ -173,91 +222,66 @@ function getMediaItems() {
 }
 
 function saveMediaItem(data, rowIndex) {
-  const sh = ensureSheet_(MEDIA_TAB, MEDIA_HEADERS);
-  const row = [data.media_id, data.group_raw, data.name, data.unit, data.link];
-  if (rowIndex) {
-    sh.getRange(rowIndex, 1, 1, row.length).setValues([row]);
-  } else {
-    sh.appendRow(row);
-  }
+  const sh  = ensureSheet_(MEDIA_TAB, MEDIA_HEADERS);
+  const row = [data.media_id, data.group_raw, data.name, data.unit, data.link || ""];
+  if (rowIndex) sh.getRange(rowIndex, 1, 1, row.length).setValues([row]);
+  else          sh.appendRow(row);
   return true;
 }
 
 function deleteMediaItem(rowIndex) {
-  const sh = ensureSheet_(MEDIA_TAB, MEDIA_HEADERS);
-  sh.deleteRow(rowIndex);
+  ensureSheet_(MEDIA_TAB, MEDIA_HEADERS).deleteRow(rowIndex);
   return true;
 }
 
 function addStockIn(data) {
-  const sh = ensureSheet_(IN_TAB, IN_HEADERS);
-  sh.appendRow([
-    data.date || new Date().toLocaleDateString("th-TH"),
-    data.doc_no || "",
-    data.note || "",
-    data.media_id,
-    data.qty,
-    data.status || "ปกติ",
+  ensureSheet_(IN_TAB, IN_HEADERS).appendRow([
+    data.date || "", data.doc_no || "", data.note || "",
+    data.media_id, data.qty, data.status || "ปกติ",
   ]);
   return true;
 }
 
 function addStockOut(data) {
-  const sh = ensureSheet_(OUT_TAB, OUT_HEADERS);
-  sh.appendRow([
-    data.date || new Date().toLocaleDateString("th-TH"),
-    data.doc_no || "",
-    data.recipient || "",
-    data.note || "",
-    data.media_id,
-    data.qty,
-    data.status || "ปกติ",
+  ensureSheet_(OUT_TAB, OUT_HEADERS).appendRow([
+    data.date || "", data.doc_no || "", data.recipient || "", data.note || "",
+    data.media_id, data.qty, data.status || "ปกติ",
   ]);
   return true;
 }
 
-// ── DASHBOARD ──────────────────────────────────────────────
+// ── DASHBOARD ────────────────────────────────────────────────
 function getDashboardData() {
-  const equip = getEquipment();
+  const equip = getEquipment("");   // all years
   const media = getMediaItems();
 
-  // equipment by category
-  const equipByCat = {};
+  const equipByCat = {}, equipByGroup = {};
+  let totalValue = 0;
   equip.forEach(e => {
-    const k = e.category || "ไม่ระบุ";
-    equipByCat[k] = (equipByCat[k] || 0) + 1;
+    const t = e[C_TYPE]  || "ไม่ระบุ";
+    const g = e[C_OWNER] || "ไม่ระบุ";
+    equipByCat[t]   = (equipByCat[t]   || 0) + 1;
+    equipByGroup[g] = (equipByGroup[g] || 0) + 1;
+    totalValue += Number(e[C_PRICE]) || 0;
   });
 
-  // equipment by responsible group
-  const equipByGroup = {};
-  equip.forEach(e => {
-    const k = e.responsible || "ไม่ระบุ";
-    equipByGroup[k] = (equipByGroup[k] || 0) + 1;
-  });
-
-  // total value (only numeric)
-  const totalValue = equip.reduce((s, e) => s + (Number(e.unit_price) || 0), 0);
-
-  // media stock status
-  const mediaStatus = { "มีเหลือ": 0, "ใกล้หมด": 0, "หมด": 0 };
-  media.forEach(m => { mediaStatus[m.status] = (mediaStatus[m.status] || 0) + 1; });
-
-  // media by group
+  const mediaStatus  = { "มีเหลือ": 0, "ใกล้หมด": 0, "หมด": 0 };
   const mediaByGroup = {};
   media.forEach(m => {
-    const k = m.group_raw || "ไม่ระบุ";
-    mediaByGroup[k] = (mediaByGroup[k] || 0) + 1;
+    mediaStatus[m.status] = (mediaStatus[m.status] || 0) + 1;
+    const g = m.group_raw || "ไม่ระบุ";
+    mediaByGroup[g] = (mediaByGroup[g] || 0) + 1;
   });
 
   return {
-    equipCount:    equip.length,
+    equipCount:  equip.length,
     equipByCat,
     equipByGroup,
     totalValue,
-    mediaCount:    media.length,
+    mediaCount:  media.length,
     mediaStatus,
     mediaByGroup,
-    outOfStock:    mediaStatus["หมด"],
-    lowStock:      mediaStatus["ใกล้หมด"],
+    outOfStock:  mediaStatus["หมด"],
+    lowStock:    mediaStatus["ใกล้หมด"],
   };
 }

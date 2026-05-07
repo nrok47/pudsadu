@@ -8,50 +8,111 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <style>
-  body { font-family: 'Sarabun', sans-serif; background: #f5f7fb; }
-  .navbar-brand { font-weight: 700; font-size: 1.1rem; }
-  .nav-tabs .nav-link { font-weight: 500; color: #555; }
-  .nav-tabs .nav-link.active { color: #0d6efd; border-bottom: 3px solid #0d6efd; }
+  :root {
+    --primary:       #1e6f3e;
+    --primary-light: #2d9e59;
+    --primary-pale:  #e8f5ee;
+    --bg:            #f4f6f9;
+    --radius:        8px;
+    --shadow:        0 2px 8px rgba(0,0,0,.09);
+  }
+  body { font-family: 'Sarabun', sans-serif; background: var(--bg); color: #343a40; font-size: 15px; }
+
+  /* topbar */
+  .topbar { background: var(--primary); color: #fff; padding: 0 20px; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 6px rgba(0,0,0,.2); }
+  .topbar h1 { font-size: 1.05rem; font-weight: 600; margin: 0; }
+
+  /* tabs */
+  .nav-tabs .nav-link { color: #555; font-weight: 500; }
+  .nav-tabs .nav-link.active { color: var(--primary); border-bottom: 3px solid var(--primary); font-weight: 700; }
 
   /* stat cards */
-  .stat-card { border-radius: 12px; border: none; box-shadow: 0 2px 8px rgba(0,0,0,.07); }
-  .stat-card .card-body { padding: 1.2rem 1.5rem; }
-  .stat-icon { font-size: 2rem; opacity: .8; }
-  .stat-label { font-size: .78rem; color: #888; text-transform: uppercase; letter-spacing: .5px; }
-  .stat-value { font-size: 2rem; font-weight: 700; line-height: 1.1; }
+  .stat-card { border: none; border-radius: 12px; box-shadow: var(--shadow); }
+  .stat-icon  { font-size: 2rem; opacity: .8; }
+  .stat-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .5px; color: #888; }
+  .stat-value { font-size: 1.9rem; font-weight: 700; line-height: 1.1; }
+
+  /* toolbar / filter bar */
+  .toolbar, .filter-bar {
+    background: #fff; border-radius: var(--radius);
+    padding: 10px 14px; display: flex; flex-wrap: wrap;
+    gap: 8px; align-items: center; box-shadow: var(--shadow);
+  }
+  .toolbar    { justify-content: space-between; margin-bottom: 10px; }
+  .filter-bar { margin-bottom: 10px; }
+  .search-box { display: flex; align-items: center; border: 1.5px solid #dee2e6;
+    border-radius: var(--radius); overflow: hidden; background: var(--bg); }
+  .search-box input { border: none; background: transparent; padding: 7px 12px;
+    font-size: 14px; font-family: inherit; outline: none; min-width: 230px; }
+  .search-box button { background: none; border: none; padding: 7px 10px; cursor: pointer; color: #888; }
+  .filter-bar select { padding: 6px 10px; border: 1.5px solid #dee2e6; border-radius: 6px;
+    font-size: 13px; font-family: inherit; background: var(--bg); }
+  .filter-bar select:focus { border-color: var(--primary); outline: none; }
+  .count-badge { background: var(--primary-pale); color: var(--primary);
+    padding: 3px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; }
 
   /* tables */
-  .table th { font-size: .82rem; font-weight: 600; text-transform: uppercase;
-               letter-spacing: .4px; white-space: nowrap; background: #f0f4ff; }
-  .table td { vertical-align: middle; font-size: .9rem; }
-  .table-hover tbody tr:hover { background: #eef2ff; }
+  .table-card { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .table th { background: var(--primary); color: #fff; font-size: .82rem;
+    font-weight: 600; text-transform: uppercase; letter-spacing: .4px;
+    white-space: nowrap; padding: 10px 12px; }
+  .table td { padding: 8px 12px; font-size: .88rem; vertical-align: middle; }
+  .table-hover tbody tr:hover { background: #f0f8f4; }
+  .cell-id   { font-family: monospace; font-size: .8rem; color: #555; }
+  .cell-long { max-width: 240px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
   /* status badges */
-  .badge-ok   { background: #dafbe1; color: #1a7f37; }
-  .badge-low  { background: #fff8c5; color: #9a6700; }
-  .badge-out  { background: #ffebe9; color: #cf222e; }
-  .badge-stat { border-radius: 6px; padding: 3px 9px; font-size: .78rem; font-weight: 600; }
+  .badge-stat { border-radius: 20px; padding: 2px 10px; font-size: .78rem; font-weight: 600; }
+  .s-ปกติ    { background: var(--primary-pale); color: var(--primary); }
+  .s-ชำรุด   { background: #fff3cd; color: #856404; }
+  .s-จำหน่าย { background: #f8d7da; color: #842029; }
+  .s-หมด     { background: #ffebe9; color: #cf222e; }
+  .s-ใกล้หมด { background: #fff8c5; color: #9a6700; }
+  .s-มีเหลือ { background: #dafbe1; color: #1a7f37; }
+  .s-other   { background: #e2e3e5; color: #41464b; }
 
-  /* search bar */
-  .search-bar { max-width: 280px; }
-  .filter-row { gap: .5rem; }
+  /* pagination */
+  .pagination-bar { display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px; border-top: 1px solid #dee2e6; flex-wrap: wrap; gap: 8px; }
+  .page-info { font-size: 13px; color: #888; }
+  .page-btns { display: flex; gap: 3px; }
+  .page-btns button { min-width: 30px; height: 30px; border-radius: 6px;
+    border: 1.5px solid #dee2e6; background: #fff; cursor: pointer;
+    font-size: 13px; font-family: inherit; padding: 0 5px; }
+  .page-btns button.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .page-btns button:disabled { opacity: .3; cursor: default; }
+  .page-size-sel { font-size: 13px; padding: 4px 7px; border-radius: 6px;
+    border: 1.5px solid #dee2e6; font-family: inherit; }
 
-  /* modal */
-  .modal-header { background: #f0f4ff; }
+  /* chart */
+  .chart-wrap { position: relative; height: 230px; }
 
-  /* loading overlay */
-  #loadingOverlay { position:fixed; inset:0; background:rgba(255,255,255,.7);
-    display:flex; align-items:center; justify-content:center; z-index:9999; }
-  .spinner-ring { width:48px; height:48px; border:5px solid #dee2e6;
-    border-top-color:#0d6efd; border-radius:50%; animation:spin .8s linear infinite; }
-  @keyframes spin { to { transform:rotate(360deg); } }
+  /* loader */
+  #loadingOverlay { position: fixed; inset: 0; background: rgba(255,255,255,.75);
+    display: flex; align-items: center; justify-content: center; z-index: 9999; }
+  .spinner-ring { width: 46px; height: 46px; border: 5px solid #dee2e6;
+    border-top-color: var(--primary); border-radius: 50%;
+    animation: spin .75s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
-  /* chart container */
-  .chart-wrap { position:relative; height:240px; }
+  /* modals */
+  .modal-header { background: #f0f8f4; }
+  .form-section-title { font-size: .75rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .7px; color: #888; border-bottom: 1px solid #dee2e6;
+    padding-bottom: 6px; margin-bottom: 12px; }
 
-  @media (max-width:576px) {
+  /* confirm modal */
+  .confirm-icon { font-size: 48px; }
+
+  /* toast */
+  .toast { min-width: 260px; }
+
+  footer { text-align: center; padding: 22px 16px 30px; color: #aaa; font-size: 13px; }
+  @media (max-width: 576px) {
+    .topbar h1 { font-size: .95rem; }
     .stat-value { font-size: 1.5rem; }
-    .filter-row { flex-wrap: wrap; }
   }
 </style>
 </head>
@@ -60,16 +121,19 @@
 <!-- loading overlay -->
 <div id="loadingOverlay"><div class="spinner-ring"></div></div>
 
-<!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3 py-2">
-  <span class="navbar-brand">
-    <i class="bi bi-clipboard2-data me-2"></i>ระบบทะเบียนครุภัณฑ์ + คลังสื่อ
-  </span>
-  <span class="ms-auto text-white-50 small d-none d-md-inline">ศูนย์อนามัยที่ ๑</span>
-</nav>
+<!-- topbar -->
+<div class="topbar">
+  <h1><i class="bi bi-clipboard2-data me-2"></i>ระบบทะเบียนครุภัณฑ์ + คลังสื่อ ศูนย์อนามัยที่ 10 อุบลราชธานี</h1>
+  <div class="d-flex gap-2">
+    <button class="btn btn-warning btn-sm fw-600" id="exportBtn" onclick="exportExcel()">
+      <i class="bi bi-download me-1"></i>Export Excel
+    </button>
+  </div>
+</div>
 
-<!-- tabs -->
-<div class="container-fluid px-3 pt-3">
+<div class="container-fluid px-3 pt-3" style="max-width:1600px">
+
+  <!-- tabs -->
   <ul class="nav nav-tabs mb-3" id="mainTabs">
     <li class="nav-item">
       <a class="nav-link active" href="#" data-tab="dashboard">
@@ -88,165 +152,150 @@
     </li>
   </ul>
 
-  <!-- ══════════ DASHBOARD ══════════ -->
+  <!-- ══ DASHBOARD ══ -->
   <div id="tabDashboard">
     <div class="row g-3 mb-4">
       <div class="col-6 col-md-3">
-        <div class="card stat-card bg-white">
-          <div class="card-body d-flex align-items-center gap-3">
-            <span class="stat-icon text-primary"><i class="bi bi-tools"></i></span>
-            <div>
-              <div class="stat-label">ครุภัณฑ์ทั้งหมด</div>
-              <div class="stat-value text-primary" id="dEquipCount">–</div>
-            </div>
-          </div>
+        <div class="card stat-card bg-white p-3 d-flex flex-row align-items-center gap-3">
+          <span class="stat-icon" style="color:var(--primary)"><i class="bi bi-tools"></i></span>
+          <div><div class="stat-label">ครุภัณฑ์ทั้งหมด</div>
+            <div class="stat-value" style="color:var(--primary)" id="dEquipCount">–</div></div>
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="card stat-card bg-white">
-          <div class="card-body d-flex align-items-center gap-3">
-            <span class="stat-icon text-success"><i class="bi bi-cash-coin"></i></span>
-            <div>
-              <div class="stat-label">มูลค่ารวม (บาท)</div>
-              <div class="stat-value text-success" id="dTotalValue">–</div>
-            </div>
-          </div>
+        <div class="card stat-card bg-white p-3 d-flex flex-row align-items-center gap-3">
+          <span class="stat-icon text-success"><i class="bi bi-cash-coin"></i></span>
+          <div><div class="stat-label">มูลค่ารวม (บาท)</div>
+            <div class="stat-value text-success" id="dTotalValue">–</div></div>
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="card stat-card bg-white">
-          <div class="card-body d-flex align-items-center gap-3">
-            <span class="stat-icon text-info"><i class="bi bi-collection"></i></span>
-            <div>
-              <div class="stat-label">สื่อทั้งหมด</div>
-              <div class="stat-value text-info" id="dMediaCount">–</div>
-            </div>
-          </div>
+        <div class="card stat-card bg-white p-3 d-flex flex-row align-items-center gap-3">
+          <span class="stat-icon text-info"><i class="bi bi-collection"></i></span>
+          <div><div class="stat-label">สื่อทั้งหมด</div>
+            <div class="stat-value text-info" id="dMediaCount">–</div></div>
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="card stat-card bg-white">
-          <div class="card-body d-flex align-items-center gap-3">
-            <span class="stat-icon text-danger"><i class="bi bi-exclamation-triangle"></i></span>
-            <div>
-              <div class="stat-label">หมด / ใกล้หมด</div>
-              <div class="stat-value text-danger" id="dAlertCount">–</div>
-            </div>
-          </div>
+        <div class="card stat-card bg-white p-3 d-flex flex-row align-items-center gap-3">
+          <span class="stat-icon text-danger"><i class="bi bi-exclamation-triangle"></i></span>
+          <div><div class="stat-label">หมด / ใกล้หมด</div>
+            <div class="stat-value text-danger" id="dAlertCount">–</div></div>
         </div>
       </div>
     </div>
-
     <div class="row g-3">
       <div class="col-md-6">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h6 class="fw-bold mb-3"><i class="bi bi-pie-chart me-1"></i>ครุภัณฑ์ตามประเภท</h6>
-            <div class="chart-wrap"><canvas id="chartEquipCat"></canvas></div>
-          </div>
+        <div class="card border-0 shadow-sm p-3">
+          <div class="fw-bold mb-2"><i class="bi bi-pie-chart me-1"></i>ครุภัณฑ์ตามประเภท</div>
+          <div class="chart-wrap"><canvas id="chartEquipCat"></canvas></div>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h6 class="fw-bold mb-3"><i class="bi bi-pie-chart me-1"></i>สถานะสต็อกสื่อ</h6>
-            <div class="chart-wrap"><canvas id="chartMediaStatus"></canvas></div>
-          </div>
+        <div class="card border-0 shadow-sm p-3">
+          <div class="fw-bold mb-2"><i class="bi bi-pie-chart me-1"></i>สถานะสต็อกสื่อ</div>
+          <div class="chart-wrap"><canvas id="chartMediaStatus"></canvas></div>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h6 class="fw-bold mb-3"><i class="bi bi-bar-chart me-1"></i>ครุภัณฑ์ตามกลุ่มงาน</h6>
-            <div class="chart-wrap"><canvas id="chartEquipGroup"></canvas></div>
-          </div>
+        <div class="card border-0 shadow-sm p-3">
+          <div class="fw-bold mb-2"><i class="bi bi-bar-chart me-1"></i>ครุภัณฑ์ตามกลุ่มงาน</div>
+          <div class="chart-wrap"><canvas id="chartEquipGroup"></canvas></div>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h6 class="fw-bold mb-3"><i class="bi bi-bar-chart me-1"></i>สื่อตามกลุ่มงาน</h6>
-            <div class="chart-wrap"><canvas id="chartMediaGroup"></canvas></div>
-          </div>
+        <div class="card border-0 shadow-sm p-3">
+          <div class="fw-bold mb-2"><i class="bi bi-bar-chart me-1"></i>สื่อตามกลุ่มงาน</div>
+          <div class="chart-wrap"><canvas id="chartMediaGroup"></canvas></div>
         </div>
       </div>
     </div>
-  </div><!-- /tabDashboard -->
+  </div>
 
-  <!-- ══════════ EQUIPMENT ══════════ -->
+  <!-- ══ EQUIPMENT ══ -->
   <div id="tabEquip" class="d-none">
-    <div class="d-flex flex-wrap filter-row align-items-center mb-3">
-      <input id="equipSearch" type="search" class="form-control search-bar"
-             placeholder="ค้นหาชื่อ / รหัส...">
-      <select id="equipCatFilter" class="form-select" style="max-width:200px">
-        <option value="">ทุกประเภท</option>
+    <!-- toolbar -->
+    <div class="toolbar">
+      <div class="d-flex gap-2 flex-wrap align-items-center">
+        <button class="btn btn-sm fw-600" style="background:var(--primary);color:#fff" onclick="openEquipModal()">
+          <i class="bi bi-plus-lg me-1"></i>เพิ่มครุภัณฑ์
+        </button>
+        <div class="search-box">
+          <input type="search" id="equipSearch" placeholder="ค้นหาชื่อ, เลขครุภัณฑ์, ผู้รับผิดชอบ...">
+          <button><i class="bi bi-search"></i></button>
+        </div>
+        <span class="count-badge" id="equipCount">– รายการ</span>
+      </div>
+    </div>
+    <!-- filter bar -->
+    <div class="filter-bar">
+      <span class="text-muted small fw-600">กรอง:</span>
+      <select id="filterYear"     onchange="onEquipYearChange()"><option value="">ปีงบประมาณทั้งหมด</option></select>
+      <select id="filterLocation" onchange="applyEquipFilter()"><option value="">สถานที่ทั้งหมด</option></select>
+      <select id="filterStatus"   onchange="applyEquipFilter()">
+        <option value="">สถานะทั้งหมด</option>
+        <option>ปกติ</option><option>ชำรุด</option><option>จำหน่าย</option>
       </select>
-      <select id="equipGroupFilter" class="form-select" style="max-width:220px">
-        <option value="">ทุกกลุ่มงาน</option>
-      </select>
-      <button class="btn btn-primary ms-auto" onclick="openEquipModal()">
-        <i class="bi bi-plus-lg me-1"></i>เพิ่มครุภัณฑ์
+      <button class="btn btn-secondary btn-sm" onclick="clearEquipFilters()">
+        <i class="bi bi-x-lg me-1"></i>ล้างตัวกรอง
       </button>
     </div>
-    <div class="card border-0 shadow-sm">
-      <div class="card-body p-0">
-        <div class="table-responsive">
-          <table class="table table-hover mb-0">
-            <thead>
-              <tr>
-                <th>#</th><th>รหัสครุภัณฑ์</th><th>ชื่อ</th>
-                <th>ประเภท</th><th>กลุ่มงาน</th>
-                <th>ราคา/หน่วย</th><th>วันที่รับ</th><th>สถานะ</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="equipTableBody"></tbody>
-          </table>
+    <!-- table -->
+    <div class="table-card">
+      <div class="table-responsive" id="equipTableWrap">
+        <div class="text-center p-5 text-muted">
+          <div class="spinner-ring mx-auto mb-3"></div>กำลังโหลด...
         </div>
       </div>
+      <div class="pagination-bar d-none" id="equipPagination"></div>
     </div>
-    <div class="text-muted small mt-2" id="equipCount"></div>
-  </div><!-- /tabEquip -->
+  </div>
 
-  <!-- ══════════ MEDIA ══════════ -->
+  <!-- ══ MEDIA ══ -->
   <div id="tabMedia" class="d-none">
-    <div class="d-flex flex-wrap filter-row align-items-center mb-3">
-      <input id="mediaSearch" type="search" class="form-control search-bar"
-             placeholder="ค้นหาชื่อ / รหัส...">
-      <select id="mediaGroupFilter" class="form-select" style="max-width:200px">
-        <option value="">ทุกกลุ่มงาน</option>
-      </select>
-      <select id="mediaStatusFilter" class="form-select" style="max-width:160px">
+    <div class="toolbar">
+      <div class="d-flex gap-2 flex-wrap align-items-center">
+        <button class="btn btn-sm fw-600" style="background:var(--primary);color:#fff" onclick="openMediaModal()">
+          <i class="bi bi-plus-lg me-1"></i>เพิ่มสื่อ
+        </button>
+        <div class="search-box">
+          <input type="search" id="mediaSearch" placeholder="ค้นหาชื่อ / รหัส...">
+          <button><i class="bi bi-search"></i></button>
+        </div>
+        <span class="count-badge" id="mediaCount">– รายการ</span>
+      </div>
+    </div>
+    <div class="filter-bar">
+      <span class="text-muted small fw-600">กรอง:</span>
+      <select id="mediaGroupFilter"  onchange="applyMediaFilter()"><option value="">ทุกกลุ่มงาน</option></select>
+      <select id="mediaStatusFilter" onchange="applyMediaFilter()">
         <option value="">ทุกสถานะ</option>
         <option>มีเหลือ</option><option>ใกล้หมด</option><option>หมด</option>
       </select>
-      <button class="btn btn-primary ms-auto" onclick="openMediaModal()">
-        <i class="bi bi-plus-lg me-1"></i>เพิ่มสื่อ
-      </button>
     </div>
-    <div class="card border-0 shadow-sm">
-      <div class="card-body p-0">
-        <div class="table-responsive">
-          <table class="table table-hover mb-0">
-            <thead>
-              <tr>
-                <th>รหัส</th><th>กลุ่มงาน</th><th>ชื่อสื่อ</th>
-                <th class="text-center">รับ</th>
-                <th class="text-center">จ่าย</th>
-                <th class="text-center">คงเหลือ</th>
-                <th>สถานะ</th><th></th>
-              </tr>
-            </thead>
-            <tbody id="mediaTableBody"></tbody>
-          </table>
-        </div>
+    <div class="table-card">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0">
+          <thead>
+            <tr>
+              <th>รหัส</th><th>กลุ่มงาน</th><th>ชื่อสื่อ</th>
+              <th class="text-center">รับ</th><th class="text-center">จ่าย</th>
+              <th class="text-center">คงเหลือ</th><th>สถานะ</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="mediaTableBody">
+            <tr><td colspan="8" class="text-center p-5 text-muted">กำลังโหลด...</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    <div class="text-muted small mt-2" id="mediaCount"></div>
-  </div><!-- /tabMedia -->
+  </div>
+
 </div><!-- /container -->
 
-<!-- ══════════ EQUIPMENT MODAL ══════════ -->
+<footer>พัฒนาโดย นายสันติสุข ป้อมหิน &nbsp;|&nbsp; ศูนย์อนามัยที่ 10 อุบลราชธานี</footer>
+
+<!-- ══ EQUIPMENT MODAL ══ -->
 <div class="modal fade" id="equipModal" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
@@ -255,80 +304,101 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <form id="equipForm">
-          <input type="hidden" id="eRowIndex">
-          <div class="row g-3">
-            <div class="col-md-3">
-              <label class="form-label fw-500">ลำดับ</label>
-              <input class="form-control" id="eFsn">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">รหัสครุภัณฑ์ <span class="text-danger">*</span></label>
-              <input class="form-control" id="eEquipId" required>
-            </div>
-            <div class="col-md-3">
-              <label class="form-label fw-500">รหัส GF</label>
-              <input class="form-control" id="eGfId">
-            </div>
-            <div class="col-md-2">
-              <label class="form-label fw-500">ปีงบประมาณ</label>
-              <input class="form-control" id="eFiscalYear">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">ประเภท</label>
-              <input class="form-control" id="eCategory">
-            </div>
-            <div class="col-md-8">
-              <label class="form-label fw-500">หมวด/ชนิด (tag คั่นด้วยจุลภาค)</label>
-              <input class="form-control" id="eTags">
-            </div>
-            <div class="col-12">
-              <label class="form-label fw-500">ชื่อครุภัณฑ์ <span class="text-danger">*</span></label>
-              <input class="form-control" id="eName" required>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label fw-500">สถานที่ตั้ง</label>
-              <input class="form-control" id="eLocation">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label fw-500">กลุ่มงานรับผิดชอบ</label>
-              <input class="form-control" id="eResponsible">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">ยี่ห้อ</label>
-              <input class="form-control" id="eBrand">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">รุ่น/แบบ</label>
-              <input class="form-control" id="eModel">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">ราคา/หน่วย</label>
-              <input class="form-control" id="eUnitPrice" type="number" step="0.01">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">หน่วย</label>
-              <input class="form-control" id="eUnit">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">วันที่รับ (ว/ด/ปพ.ศ.)</label>
-              <input class="form-control" id="eReceivedDate" placeholder="เช่น 15/3/2568">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">สถานะ</label>
-              <select class="form-select" id="eStatus">
-                <option>ปกติ</option>
-                <option>ชำรุด</option>
-                <option>จำหน่าย</option>
-                <option>สูญหาย</option>
-              </select>
-            </div>
+        <input type="hidden" id="eRowIndex">
+        <div class="form-section-title">เลขครุภัณฑ์</div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">เลขครุภัณฑ์ FSN</label>
+            <input class="form-control form-control-sm" id="eFsn" placeholder="เช่น 3201125960011">
           </div>
-        </form>
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">เลขครุภัณฑ์ <span class="text-danger">*</span></label>
+            <input class="form-control form-control-sm" id="eId" placeholder="เช่น 6530-031-0005-21">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label fw-500 small">เลขครุภัณฑ์ GF</label>
+            <input class="form-control form-control-sm" id="eGf">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label fw-500 small">ปีงบประมาณ</label>
+            <input class="form-control form-control-sm" id="eYear" type="number" placeholder="เช่น 2569">
+          </div>
+        </div>
+        <div class="form-section-title">รายละเอียด</div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">ประเภท</label>
+            <select class="form-select form-select-sm" id="eType">
+              <option value="">-- เลือกประเภท --</option>
+              <option>ครุภัณฑ์งานบ้านงานครัว</option>
+              <option>ครุภัณฑ์โฆษณาและเผยแพร่</option>
+              <option>ครุภัณฑ์การเกษตร</option>
+              <option>ครุภัณฑ์การศึกษา</option>
+              <option>ครุภัณฑ์คอมพิวเตอร์</option>
+              <option>ครุภัณฑ์ไฟฟ้าและวิทยุ</option>
+              <option>ครุภัณฑ์โรงงาน</option>
+              <option>ครุภัณฑ์วิทยาศาสตร์และการแพทย์</option>
+              <option>ครุภัณฑ์สำนักงาน</option>
+              <option>ครุภัณฑ์ยานพาหนะและขนส่ง</option>
+              <option>ครุภัณฑ์กีฬาและนันทนาการ</option>
+              <option>ครุภัณฑ์ดนตรี</option>
+              <option>อื่นๆ</option>
+            </select>
+          </div>
+          <div class="col-md-8">
+            <label class="form-label fw-500 small">หมวด/ชนิด</label>
+            <input class="form-control form-control-sm" id="eCategory" placeholder="คั่นด้วยจุลภาค">
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-500 small">ชื่อเรียก/คุณลักษณะครุภัณฑ์ <span class="text-danger">*</span></label>
+            <input class="form-control form-control-sm" id="eName">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">ยี่ห้อ</label>
+            <input class="form-control form-control-sm" id="eBrand">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">รุ่น</label>
+            <input class="form-control form-control-sm" id="eModel">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label fw-500 small">ราคาต่อหน่วย (บาท)</label>
+            <input class="form-control form-control-sm" id="ePrice" type="number" step="0.01" min="0">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label fw-500 small">หน่วยนับ</label>
+            <select class="form-select form-select-sm" id="eUnit">
+              <option value="">-- --</option>
+              <option>ตัว</option><option>เครื่อง</option><option>ชุด</option>
+              <option>อัน</option><option>คัน</option><option>อื่นๆ</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-section-title">ที่ตั้งและสถานะ</div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">สถานที่ใช้งาน</label>
+            <input class="form-control form-control-sm" id="eLocation">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">ผู้รับผิดชอบ</label>
+            <input class="form-control form-control-sm" id="eOwner">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label fw-500 small">วันที่รับเข้า (ว/ด/ปพ.ศ.)</label>
+            <input class="form-control form-control-sm" id="eDate" placeholder="เช่น 7/5/2568">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label fw-500 small">สถานะ</label>
+            <select class="form-select form-select-sm" id="eStatus">
+              <option>ปกติ</option><option>ชำรุด</option><option>จำหน่าย</option><option>สูญหาย</option>
+            </select>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
-        <button class="btn btn-primary" onclick="saveEquip()">
+        <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">ยกเลิก</button>
+        <button class="btn btn-sm fw-600" style="background:var(--primary);color:#fff" id="equipSaveBtn" onclick="saveEquip()">
           <i class="bi bi-save me-1"></i>บันทึก
         </button>
       </div>
@@ -336,7 +406,7 @@
   </div>
 </div>
 
-<!-- ══════════ MEDIA ITEM MODAL ══════════ -->
+<!-- ══ MEDIA MODAL ══ -->
 <div class="modal fade" id="mediaModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -345,35 +415,33 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <form id="mediaForm">
-          <input type="hidden" id="mRowIndex">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <label class="form-label fw-500">รหัสสื่อ <span class="text-danger">*</span></label>
-              <input class="form-control" id="mId" required>
-            </div>
-            <div class="col-md-8">
-              <label class="form-label fw-500">กลุ่มงาน</label>
-              <input class="form-control" id="mGroup">
-            </div>
-            <div class="col-12">
-              <label class="form-label fw-500">ชื่อสื่อ <span class="text-danger">*</span></label>
-              <input class="form-control" id="mName" required>
-            </div>
-            <div class="col-md-4">
-              <label class="form-label fw-500">หน่วย</label>
-              <input class="form-control" id="mUnit">
-            </div>
-            <div class="col-md-8">
-              <label class="form-label fw-500">ลิงก์ดาวน์โหลด</label>
-              <input class="form-control" id="mLink" type="url">
-            </div>
+        <input type="hidden" id="mRowIndex">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">รหัสสื่อ <span class="text-danger">*</span></label>
+            <input class="form-control form-control-sm" id="mId">
           </div>
-        </form>
+          <div class="col-md-8">
+            <label class="form-label fw-500 small">กลุ่มงาน</label>
+            <input class="form-control form-control-sm" id="mGroup">
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-500 small">ชื่อสื่อ <span class="text-danger">*</span></label>
+            <input class="form-control form-control-sm" id="mName">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label fw-500 small">หน่วย</label>
+            <input class="form-control form-control-sm" id="mUnit">
+          </div>
+          <div class="col-md-8">
+            <label class="form-label fw-500 small">ลิงก์ดาวน์โหลด</label>
+            <input class="form-control form-control-sm" id="mLink" type="url">
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
-        <button class="btn btn-primary" onclick="saveMedia()">
+        <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">ยกเลิก</button>
+        <button class="btn btn-sm fw-600" style="background:var(--primary);color:#fff" onclick="saveMedia()">
           <i class="bi bi-save me-1"></i>บันทึก
         </button>
       </div>
@@ -381,40 +449,37 @@
   </div>
 </div>
 
-<!-- ══════════ STOCK-IN MODAL ══════════ -->
+<!-- ══ STOCK-IN MODAL ══ -->
 <div class="modal fade" id="stockInModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title fw-bold">บันทึกรับเข้า</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+      <div class="modal-header"><h5 class="modal-title fw-bold">บันทึกรับเข้า</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
       <div class="modal-body">
-        <p class="mb-3 text-muted small">สื่อ: <strong id="siMediaName"></strong></p>
-        <input type="hidden" id="siMediaId">
+        <p class="mb-3 text-muted small">สื่อ: <strong id="siName"></strong></p>
+        <input type="hidden" id="siId">
         <div class="row g-3">
           <div class="col-md-6">
-            <label class="form-label fw-500">วันที่</label>
-            <input class="form-control" id="siDate" type="text"
-                   placeholder="ว/ด/ปพ.ศ. เช่น 7/5/2568">
+            <label class="form-label fw-500 small">วันที่</label>
+            <input class="form-control form-control-sm" id="siDate" placeholder="ว/ด/ปพ.ศ.">
           </div>
           <div class="col-md-6">
-            <label class="form-label fw-500">เลขที่เอกสาร</label>
-            <input class="form-control" id="siDocNo">
+            <label class="form-label fw-500 small">เลขที่เอกสาร</label>
+            <input class="form-control form-control-sm" id="siDocNo">
           </div>
           <div class="col-md-4">
-            <label class="form-label fw-500">จำนวน <span class="text-danger">*</span></label>
-            <input class="form-control" id="siQty" type="number" min="1" required>
+            <label class="form-label fw-500 small">จำนวน <span class="text-danger">*</span></label>
+            <input class="form-control form-control-sm" id="siQty" type="number" min="1">
           </div>
           <div class="col-md-8">
-            <label class="form-label fw-500">หมายเหตุ</label>
-            <input class="form-control" id="siNote">
+            <label class="form-label fw-500 small">หมายเหตุ</label>
+            <input class="form-control form-control-sm" id="siNote">
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
-        <button class="btn btn-success" onclick="confirmStockIn()">
+        <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">ยกเลิก</button>
+        <button class="btn btn-success btn-sm fw-600" onclick="confirmStockIn()">
           <i class="bi bi-box-arrow-in-down me-1"></i>บันทึกรับเข้า
         </button>
       </div>
@@ -422,44 +487,41 @@
   </div>
 </div>
 
-<!-- ══════════ STOCK-OUT MODAL ══════════ -->
+<!-- ══ STOCK-OUT MODAL ══ -->
 <div class="modal fade" id="stockOutModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title fw-bold">บันทึกจ่ายออก</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
+      <div class="modal-header"><h5 class="modal-title fw-bold">บันทึกจ่ายออก</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
       <div class="modal-body">
-        <p class="mb-3 text-muted small">สื่อ: <strong id="soMediaName"></strong></p>
-        <input type="hidden" id="soMediaId">
+        <p class="mb-3 text-muted small">สื่อ: <strong id="soName"></strong></p>
+        <input type="hidden" id="soId">
         <div class="row g-3">
           <div class="col-md-6">
-            <label class="form-label fw-500">วันที่</label>
-            <input class="form-control" id="soDate" type="text"
-                   placeholder="ว/ด/ปพ.ศ. เช่น 7/5/2568">
+            <label class="form-label fw-500 small">วันที่</label>
+            <input class="form-control form-control-sm" id="soDate" placeholder="ว/ด/ปพ.ศ.">
           </div>
           <div class="col-md-6">
-            <label class="form-label fw-500">เลขที่เอกสาร</label>
-            <input class="form-control" id="soDocNo">
+            <label class="form-label fw-500 small">เลขที่เอกสาร</label>
+            <input class="form-control form-control-sm" id="soDocNo">
           </div>
           <div class="col-12">
-            <label class="form-label fw-500">ผู้รับ / หน่วยงาน</label>
-            <input class="form-control" id="soRecipient">
+            <label class="form-label fw-500 small">ผู้รับ / หน่วยงาน</label>
+            <input class="form-control form-control-sm" id="soRecipient">
           </div>
           <div class="col-md-4">
-            <label class="form-label fw-500">จำนวน <span class="text-danger">*</span></label>
-            <input class="form-control" id="soQty" type="number" min="1" required>
+            <label class="form-label fw-500 small">จำนวน <span class="text-danger">*</span></label>
+            <input class="form-control form-control-sm" id="soQty" type="number" min="1">
           </div>
           <div class="col-md-8">
-            <label class="form-label fw-500">หมายเหตุ</label>
-            <input class="form-control" id="soNote">
+            <label class="form-label fw-500 small">หมายเหตุ</label>
+            <input class="form-control form-control-sm" id="soNote">
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
-        <button class="btn btn-warning text-dark" onclick="confirmStockOut()">
+        <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">ยกเลิก</button>
+        <button class="btn btn-warning btn-sm fw-600" onclick="confirmStockOut()">
           <i class="bi bi-box-arrow-up me-1"></i>บันทึกจ่ายออก
         </button>
       </div>
@@ -467,490 +529,597 @@
   </div>
 </div>
 
-<!-- ══════════ DELETE CONFIRM MODAL ══════════ -->
+<!-- ══ DELETE CONFIRM ══ -->
 <div class="modal fade" id="deleteModal" tabindex="-1">
   <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header bg-danger text-white">
-        <h6 class="modal-title fw-bold">ยืนยันการลบ</h6>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+    <div class="modal-content text-center">
+      <div class="modal-body pt-4">
+        <div class="confirm-icon mb-2">🗑️</div>
+        <h6 class="fw-bold mb-1">ยืนยันการลบ</h6>
+        <p class="text-muted small mb-1">คุณต้องการลบรายการ</p>
+        <strong class="d-block mb-3" id="deleteItemName">—</strong>
+        <p class="text-muted small">ข้อมูลจะถูกลบออกจาก Spreadsheet ถาวร</p>
       </div>
-      <div class="modal-body">
-        <p id="deleteMsg" class="mb-0"></p>
-      </div>
-      <div class="modal-footer">
+      <div class="modal-footer justify-content-center border-0 pb-4">
         <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">ยกเลิก</button>
-        <button class="btn btn-danger btn-sm" id="deleteConfirmBtn">ลบ</button>
+        <button class="btn btn-danger btn-sm fw-600" id="deleteConfirmBtn">ลบรายการ</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Toast -->
+<!-- toast -->
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="appToast" class="toast align-items-center text-white border-0" role="alert">
     <div class="d-flex">
-      <div class="toast-body" id="toastMsg"></div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto"
-              data-bs-dismiss="toast"></button>
+      <div class="toast-body fw-500" id="toastMsg"></div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
     </div>
   </div>
 </div>
 
-<!-- scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 <script>
-// ── State ──────────────────────────────────────────────────
-const S = {
-  equip:     [],
-  media:     [],
-  dashboard: null,
-  charts:    {},
+// ── Column keys (must match Code.gs constants) ─────────────────
+const COL = {
+  FSN:      'เลขครุภัณฑ์ FSN',
+  ID:       'เลขครุภัณฑ์',
+  GF:       'เลขครุภัณฑ์ GF',
+  YEAR:     'ปีงบประมาณ',
+  TYPE:     'ประเภท',
+  CATEGORY: 'หมวด/ชนิด',
+  NAME:     'ชื่อเรียก/คุณลักษณะครุภัณฑ์',
+  LOCATION: 'สถานที่ใช้งาน',
+  OWNER:    'ผู้รับผิดชอบ',
+  BRAND:    'ยี่ห้อ',
+  MODEL:    'รุ่น',
+  PRICE:    'ราคาต่อหน่วย',
+  UNIT:     'หน่วยนับ',
+  DATE:     'วันที่รับเข้า',
+  STATUS:   'สถานะ',
 };
 
-// ── Helpers ────────────────────────────────────────────────
+// ── State ──────────────────────────────────────────────────────
+const S = {
+  equip:        [],       // current year equipment rows
+  equipFiltered:[],       // after client-side filter/search
+  media:        [],
+  mediaFiltered:[],
+  charts:       {},
+  filterOpts:   { years:[], locations:[], statuses:[], latestYear:'' },
+  equipYear:    '',
+  equipStatus:  '',
+  equipLocation:'',
+  equipSearch:  '',
+  equipPage:    1,
+  equipPageSize:25,
+};
+
+// ── Helpers ────────────────────────────────────────────────────
 function showLoading(v) {
-  document.getElementById("loadingOverlay").style.display = v ? "flex" : "none";
+  document.getElementById('loadingOverlay').style.display = v ? 'flex' : 'none';
 }
 
-function toast(msg, type = "success") {
-  const el = document.getElementById("appToast");
+function toast(msg, type = 'success') {
+  const el = document.getElementById('appToast');
   el.className = `toast align-items-center text-white border-0 bg-${type}`;
-  document.getElementById("toastMsg").textContent = msg;
+  document.getElementById('toastMsg').textContent = msg;
   bootstrap.Toast.getOrCreateInstance(el, { delay: 3000 }).show();
 }
 
-function fmt(n) {
-  if (n === null || n === undefined || n === "") return "–";
-  return Number(n).toLocaleString("th-TH");
+function esc(s) {
+  return String(s === null || s === undefined ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+function fmt(n)  { return (n === null || n === undefined || n === '') ? '–' : Number(n).toLocaleString('th-TH'); }
 function fmtVal(n) {
-  if (!n) return "–";
-  return Number(n).toLocaleString("th-TH", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  if (!n && n !== 0) return '–';
+  return Number(n).toLocaleString('th-TH', { minimumFractionDigits:2, maximumFractionDigits:2 });
 }
 
 function statusBadge(st) {
-  const map = { "มีเหลือ": "ok", "ใกล้หมด": "low", "หมด": "out" };
-  const cls = map[st] || "ok";
-  return `<span class="badge badge-stat badge-${cls}">${st || "ปกติ"}</span>`;
+  const map = { ปกติ:'s-ปกติ', ชำรุด:'s-ชำรุด', จำหน่าย:'s-จำหน่าย',
+                มีเหลือ:'s-มีเหลือ', ใกล้หมด:'s-ใกล้หมด', หมด:'s-หมด' };
+  return `<span class="badge-stat ${map[st] || 's-other'}">${esc(st || 'ปกติ')}</span>`;
 }
 
+const PALETTE = ['#1e6f3e','#2d9e59','#4e79a7','#f28e2c','#e15759',
+                 '#76b7b2','#edc948','#b07aa1','#ff9da7','#9c755f'];
+
 function buildChart(id, type, labels, data, colors) {
-  const ctx = document.getElementById(id).getContext("2d");
+  const ctx = document.getElementById(id).getContext('2d');
   if (S.charts[id]) S.charts[id].destroy();
   S.charts[id] = new Chart(ctx, {
     type,
     data: { labels, datasets: [{ data, backgroundColor: colors, borderWidth: 1 }] },
     options: {
       responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { position: type === "doughnut" ? "right" : "bottom",
-                            labels: { font: { family: "Sarabun" }, boxWidth: 12 } } },
-      scales: type === "bar" ? {
-        x: { ticks: { font: { family: "Sarabun", size: 11 }, maxRotation: 30 } },
-        y: { ticks: { font: { family: "Sarabun" } }, beginAtZero: true }
+      plugins: { legend: { position: type === 'doughnut' ? 'right' : 'bottom',
+        labels: { font: { family: 'Sarabun' }, boxWidth: 12, fontSize: 12 } } },
+      scales: type === 'bar' ? {
+        x: { ticks: { font: { family: 'Sarabun', size: 11 }, maxRotation: 35 } },
+        y: { ticks: { font: { family: 'Sarabun' } }, beginAtZero: true },
       } : {},
     },
   });
 }
 
-const PALETTE = [
-  "#4e79a7","#f28e2c","#e15759","#76b7b2","#59a14f",
-  "#edc948","#b07aa1","#ff9da7","#9c755f","#bab0ac"
-];
-
-// ── Tab switching ──────────────────────────────────────────
-document.querySelectorAll("[data-tab]").forEach(link => {
-  link.addEventListener("click", e => {
+// ── Tab switching ──────────────────────────────────────────────
+document.querySelectorAll('[data-tab]').forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    document.querySelectorAll("[data-tab]").forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-    ["tabDashboard","tabEquip","tabMedia"].forEach(id =>
-      document.getElementById(id).classList.add("d-none"));
-    const map = { dashboard:"tabDashboard", equip:"tabEquip", media:"tabMedia" };
-    document.getElementById(map[link.dataset.tab]).classList.remove("d-none");
+    document.querySelectorAll('[data-tab]').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    ['tabDashboard','tabEquip','tabMedia'].forEach(id =>
+      document.getElementById(id).classList.add('d-none'));
+    const map = { dashboard:'tabDashboard', equip:'tabEquip', media:'tabMedia' };
+    document.getElementById(map[link.dataset.tab]).classList.remove('d-none');
+
+    // Show/hide export button — only relevant for equipment
+    document.getElementById('exportBtn').style.display =
+      link.dataset.tab === 'equip' ? '' : 'none';
   });
 });
 
-// ── Load all data ──────────────────────────────────────────
-function loadAll() {
-  showLoading(true);
-  let done = 0;
-  function check() { if (++done === 2) { showLoading(false); renderAll(); } }
+// ── Init: 2-step load ──────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  // modals
+  window._equipModal_    = new bootstrap.Modal(document.getElementById('equipModal'));
+  window._mediaModal_    = new bootstrap.Modal(document.getElementById('mediaModal'));
+  window._stockInModal_  = new bootstrap.Modal(document.getElementById('stockInModal'));
+  window._stockOutModal_ = new bootstrap.Modal(document.getElementById('stockOutModal'));
+  window._deleteModal_   = new bootstrap.Modal(document.getElementById('deleteModal'));
 
-  google.script.run
-    .withSuccessHandler(d => { S.equip = d; check(); })
-    .withFailureHandler(e => { toast("โหลดครุภัณฑ์ไม่สำเร็จ: " + e.message, "danger"); check(); })
-    .getEquipment();
+  // Hide export btn initially (shown only on equip tab)
+  document.getElementById('exportBtn').style.display = 'none';
 
+  // Step 1: get filter options fast, then load equip + media
   google.script.run
-    .withSuccessHandler(d => { S.media = d; check(); })
-    .withFailureHandler(e => { toast("โหลดคลังสื่อไม่สำเร็จ: " + e.message, "danger"); check(); })
+    .withSuccessHandler(opts => {
+      S.filterOpts   = opts;
+      S.equipYear    = opts.latestYear;
+      buildEquipDropdowns(opts);
+      loadEquip(opts.latestYear);
+      loadMedia();
+      loadDashboard();
+    })
+    .withFailureHandler(e => { showLoading(false); toast(e.message, 'danger'); })
+    .getFilterOptions();
+});
+
+// ── Equipment loading ──────────────────────────────────────────
+function loadEquip(yearFilter) {
+  document.getElementById('equipTableWrap').innerHTML =
+    '<div class="text-center p-5 text-muted"><div class="spinner-ring mx-auto mb-3"></div>' +
+    'กำลังโหลดปี ' + (yearFilter || 'ทั้งหมด') + '...</div>';
+  document.getElementById('equipPagination').classList.add('d-none');
+  google.script.run
+    .withSuccessHandler(rows => {
+      S.equip = rows;
+      S.equipPage = 1;
+      applyEquipFilter();
+      showLoading(false);
+    })
+    .withFailureHandler(e => { showLoading(false); toast(e.message, 'danger'); })
+    .getEquipment(yearFilter);
+}
+
+function onEquipYearChange() {
+  const year = document.getElementById('filterYear').value;
+  S.equipYear = year;
+  loadEquip(year);
+}
+
+function buildEquipDropdowns(opts) {
+  const fy = document.getElementById('filterYear');
+  fy.innerHTML = '<option value="">ปีงบประมาณทั้งหมด</option>';
+  opts.years.forEach(y => {
+    fy.innerHTML += `<option value="${esc(y)}"${y === opts.latestYear ? ' selected' : ''}>${esc(y)}</option>`;
+  });
+  const fl = document.getElementById('filterLocation');
+  fl.innerHTML = '<option value="">สถานที่ทั้งหมด</option>';
+  opts.locations.forEach(l => {
+    fl.innerHTML += `<option value="${esc(l)}">${esc(l)}</option>`;
+  });
+}
+
+function applyEquipFilter() {
+  S.equipStatus   = document.getElementById('filterStatus').value;
+  S.equipLocation = document.getElementById('filterLocation').value;
+  S.equipSearch   = document.getElementById('equipSearch').value.toLowerCase().trim();
+  S.equipPage     = 1;
+
+  S.equipFiltered = S.equip.filter(r => {
+    if (S.equipStatus   && r[COL.STATUS]   !== S.equipStatus)   return false;
+    if (S.equipLocation && r[COL.LOCATION] !== S.equipLocation) return false;
+    if (S.equipSearch) {
+      const hay = [r[COL.ID], r[COL.FSN], r[COL.GF], r[COL.NAME],
+                   r[COL.OWNER], r[COL.LOCATION], r[COL.BRAND], r[COL.MODEL],
+                   r[COL.TYPE]].join(' ').toLowerCase();
+      if (!hay.includes(S.equipSearch)) return false;
+    }
+    return true;
+  });
+  renderEquipTable();
+}
+
+function clearEquipFilters() {
+  document.getElementById('equipSearch').value    = '';
+  document.getElementById('filterStatus').value   = '';
+  document.getElementById('filterLocation').value = '';
+  S.equipSearch = ''; S.equipStatus = ''; S.equipLocation = '';
+  S.equipPage = 1;
+  applyEquipFilter();
+}
+
+// ── Equipment table render ─────────────────────────────────────
+function renderEquipTable() {
+  const { equipFiltered: rows, equipPage: page, equipPageSize: ps } = S;
+  const start = (page - 1) * ps;
+  const slice = rows.slice(start, start + ps);
+
+  document.getElementById('equipCount').textContent = rows.length.toLocaleString() + ' รายการ';
+
+  let html = `<table class="table table-hover mb-0">
+    <thead><tr>
+      <th>#</th><th>เลขครุภัณฑ์</th><th>ชื่อเรียก/คุณลักษณะ</th>
+      <th>ประเภท</th><th>สถานที่</th><th>ผู้รับผิดชอบ</th>
+      <th>ยี่ห้อ/รุ่น</th><th style="text-align:right">ราคา (บาท)</th>
+      <th>วันที่รับ</th><th>สถานะ</th><th></th>
+    </tr></thead><tbody>`;
+
+  if (!slice.length) {
+    html += '<tr><td colspan="11" class="text-center p-5 text-muted">ไม่พบข้อมูลที่ตรงกัน</td></tr>';
+  } else {
+    slice.forEach((r, i) => {
+      const brandModel = [r[COL.BRAND], r[COL.MODEL]].filter(v => v && v !== '-').join(' / ') || '–';
+      html += `<tr>
+        <td class="text-muted" style="font-size:.8rem">${start + i + 1}</td>
+        <td class="cell-id">${esc(r[COL.ID] || '')}${r[COL.FSN] ? '<br><span style="color:#aaa;font-size:.73rem">' + esc(r[COL.FSN]) + '</span>' : ''}</td>
+        <td class="cell-long" title="${esc(r[COL.NAME] || '')}">${esc(r[COL.NAME] || '–')}</td>
+        <td style="font-size:.83rem">${esc(r[COL.TYPE] || '–')}</td>
+        <td>${esc(r[COL.LOCATION] || '–')}</td>
+        <td>${esc(r[COL.OWNER] || '–')}</td>
+        <td style="font-size:.83rem">${esc(brandModel)}</td>
+        <td style="text-align:right;font-weight:600;color:var(--primary)">${fmtVal(r[COL.PRICE])}</td>
+        <td style="font-size:.83rem;white-space:nowrap">${esc(r[COL.DATE] || '–')}</td>
+        <td>${statusBadge(r[COL.STATUS])}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-warning py-0 me-1" title="แก้ไข"
+                  onclick="openEquipModal(${r._row})">✏️</button>
+          <button class="btn btn-sm btn-outline-danger py-0" title="ลบ"
+                  onclick="confirmDelete('equip',${r._row},'${(r[COL.NAME]||'').replace(/'/g,"\\'")}')">🗑️</button>
+        </td>
+      </tr>`;
+    });
+  }
+  html += '</tbody></table>';
+  document.getElementById('equipTableWrap').innerHTML = html;
+  renderEquipPagination(rows.length, ps, page);
+}
+
+function renderEquipPagination(total, ps, cur) {
+  const pag   = document.getElementById('equipPagination');
+  const pages = Math.ceil(total / ps);
+  if (total === 0) { pag.classList.add('d-none'); return; }
+  pag.classList.remove('d-none');
+
+  const s = (cur - 1) * ps + 1, e = Math.min(cur * ps, total);
+  let h = `<span class="page-info">แสดง ${s}–${e} จาก ${total.toLocaleString()}</span>`;
+  h += '<div class="d-flex align-items-center gap-2"><div class="page-btns">';
+  h += `<button onclick="goEquipPage(${cur - 1})" ${cur === 1 ? 'disabled' : ''}>‹</button>`;
+  for (let p = 1; p <= pages; p++) {
+    if (pages > 9 && Math.abs(p - cur) > 2 && p !== 1 && p !== pages) {
+      if (Math.abs(p - cur) === 3) h += '<button disabled>…</button>';
+      continue;
+    }
+    h += `<button class="${p === cur ? 'active' : ''}" onclick="goEquipPage(${p})">${p}</button>`;
+  }
+  h += `<button onclick="goEquipPage(${cur + 1})" ${cur === pages ? 'disabled' : ''}>›</button>`;
+  h += '</div>';
+  h += `<select class="page-size-sel" onchange="changeEquipPageSize(this.value)">`;
+  [25, 50, 100, 200].forEach(n => {
+    h += `<option value="${n}"${ps === n ? ' selected' : ''}>${n} รายการ/หน้า</option>`;
+  });
+  h += '</select></div>';
+  pag.innerHTML = h;
+}
+
+function goEquipPage(p) {
+  const pages = Math.ceil(S.equipFiltered.length / S.equipPageSize);
+  if (p < 1 || p > pages) return;
+  S.equipPage = p;
+  renderEquipTable();
+  document.querySelector('.table-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function changeEquipPageSize(n) { S.equipPageSize = +n; S.equipPage = 1; renderEquipTable(); }
+
+// Live search
+document.getElementById('equipSearch').addEventListener('input', applyEquipFilter);
+
+// ── Equipment CRUD ─────────────────────────────────────────────
+function openEquipModal(rowIndex) {
+  document.getElementById('eRowIndex').value  = rowIndex || '';
+  document.getElementById('equipModalTitle').textContent =
+    rowIndex ? '✏️ แก้ไขครุภัณฑ์' : '+ เพิ่มครุภัณฑ์';
+  const fields = { eFsn:COL.FSN, eId:COL.ID, eGf:COL.GF, eYear:COL.YEAR,
+    eType:COL.TYPE, eCategory:COL.CATEGORY, eName:COL.NAME,
+    eLocation:COL.LOCATION, eOwner:COL.OWNER, eBrand:COL.BRAND,
+    eModel:COL.MODEL, ePrice:COL.PRICE, eUnit:COL.UNIT,
+    eDate:COL.DATE, eStatus:COL.STATUS };
+  // Reset
+  Object.keys(fields).forEach(id => { document.getElementById(id).value = ''; });
+  document.getElementById('eStatus').value = 'ปกติ';
+  if (rowIndex) {
+    const r = S.equip.find(x => x._row === rowIndex);
+    if (r) Object.entries(fields).forEach(([id, col]) => {
+      document.getElementById(id).value = r[col] || '';
+    });
+  }
+  _equipModal_.show();
+}
+
+function saveEquip() {
+  const id   = document.getElementById('eId').value.trim();
+  const name = document.getElementById('eName').value.trim();
+  if (!id && !name) { toast('กรุณากรอกเลขครุภัณฑ์หรือชื่อเรียก', 'warning'); return; }
+  const rowIndex = document.getElementById('eRowIndex').value;
+  const data = {
+    [COL.FSN]:      document.getElementById('eFsn').value.trim(),
+    [COL.ID]:       id,
+    [COL.GF]:       document.getElementById('eGf').value.trim(),
+    [COL.YEAR]:     document.getElementById('eYear').value ? Number(document.getElementById('eYear').value) : '',
+    [COL.TYPE]:     document.getElementById('eType').value,
+    [COL.CATEGORY]: document.getElementById('eCategory').value.trim(),
+    [COL.NAME]:     name,
+    [COL.LOCATION]: document.getElementById('eLocation').value.trim(),
+    [COL.OWNER]:    document.getElementById('eOwner').value.trim(),
+    [COL.BRAND]:    document.getElementById('eBrand').value.trim(),
+    [COL.MODEL]:    document.getElementById('eModel').value.trim(),
+    [COL.PRICE]:    document.getElementById('ePrice').value ? Number(document.getElementById('ePrice').value) : '',
+    [COL.UNIT]:     document.getElementById('eUnit').value,
+    [COL.DATE]:     document.getElementById('eDate').value.trim(),
+    [COL.STATUS]:   document.getElementById('eStatus').value,
+  };
+  const btn = document.getElementById('equipSaveBtn');
+  btn.disabled = true; btn.innerHTML = '⏳ กำลังบันทึก...';
+  google.script.run
+    .withSuccessHandler(() => {
+      _equipModal_.hide();
+      toast(rowIndex ? 'แก้ไขรายการสำเร็จ ✓' : 'เพิ่มรายการสำเร็จ ✓');
+      btn.disabled = false; btn.innerHTML = '<i class="bi bi-save me-1"></i>บันทึก';
+      loadEquip(S.equipYear);
+      loadDashboard();
+    })
+    .withFailureHandler(e => {
+      toast(e.message, 'danger');
+      btn.disabled = false; btn.innerHTML = '<i class="bi bi-save me-1"></i>บันทึก';
+    })
+    .saveEquipment(data, rowIndex ? parseInt(rowIndex) : null);
+}
+
+// ── Media loading ──────────────────────────────────────────────
+function loadMedia() {
+  google.script.run
+    .withSuccessHandler(rows => { S.media = rows; applyMediaFilter(); })
+    .withFailureHandler(e => toast(e.message, 'danger'))
     .getMediaItems();
 }
 
-function loadDashboard() {
-  google.script.run
-    .withSuccessHandler(d => { S.dashboard = d; renderDashboard(); })
-    .withFailureHandler(e => console.error(e))
-    .getDashboardData();
-}
+function applyMediaFilter() {
+  const q   = document.getElementById('mediaSearch').value.toLowerCase();
+  const grp = document.getElementById('mediaGroupFilter').value;
+  const st  = document.getElementById('mediaStatusFilter').value;
 
-function renderAll() {
-  renderEquip();
-  renderMedia();
-  loadDashboard();
-}
+  const grps = [...new Set(S.media.map(m => m.group_raw).filter(Boolean))].sort();
+  const cur  = document.getElementById('mediaGroupFilter').value;
+  document.getElementById('mediaGroupFilter').innerHTML =
+    '<option value="">ทุกกลุ่มงาน</option>' +
+    grps.map(g => `<option${cur === g ? ' selected' : ''}>${esc(g)}</option>`).join('');
 
-// ── Dashboard ──────────────────────────────────────────────
-function renderDashboard() {
-  const d = S.dashboard;
-  if (!d) return;
-  document.getElementById("dEquipCount").textContent = fmt(d.equipCount);
-  document.getElementById("dTotalValue").textContent = fmtVal(d.totalValue);
-  document.getElementById("dMediaCount").textContent = fmt(d.mediaCount);
-  document.getElementById("dAlertCount").textContent =
-    `${fmt(d.outOfStock)} / ${fmt(d.lowStock)}`;
-
-  // equip by cat doughnut
-  const cats = Object.entries(d.equipByCat).sort((a,b) => b[1]-a[1]);
-  buildChart("chartEquipCat", "doughnut",
-    cats.map(e=>e[0]), cats.map(e=>e[1]),
-    PALETTE.slice(0, cats.length));
-
-  // media status doughnut
-  buildChart("chartMediaStatus", "doughnut",
-    ["มีเหลือ","ใกล้หมด","หมด"],
-    [d.mediaStatus["มีเหลือ"]||0, d.mediaStatus["ใกล้หมด"]||0, d.mediaStatus["หมด"]||0],
-    ["#59a14f","#edc948","#e15759"]);
-
-  // equip by group bar
-  const grps = Object.entries(d.equipByGroup).sort((a,b) => b[1]-a[1]).slice(0,10);
-  buildChart("chartEquipGroup", "bar",
-    grps.map(e=>e[0].replace("กลุ่ม","")),
-    grps.map(e=>e[1]), PALETTE);
-
-  // media by group bar
-  const mg = Object.entries(d.mediaByGroup).sort((a,b) => b[1]-a[1]);
-  buildChart("chartMediaGroup", "bar",
-    mg.map(e=>e[0]), mg.map(e=>e[1]), PALETTE);
-}
-
-// ── Equipment table ────────────────────────────────────────
-function renderEquip() {
-  const q    = document.getElementById("equipSearch").value.toLowerCase();
-  const cat  = document.getElementById("equipCatFilter").value;
-  const grp  = document.getElementById("equipGroupFilter").value;
-
-  // populate filters
-  const cats  = [...new Set(S.equip.map(e=>e.category).filter(Boolean))].sort();
-  const grps  = [...new Set(S.equip.map(e=>e.responsible).filter(Boolean))].sort();
-  populateSelect("equipCatFilter",  cats, cat,  "ทุกประเภท");
-  populateSelect("equipGroupFilter", grps, grp,  "ทุกกลุ่มงาน");
-
-  const rows = S.equip.filter(e =>
-    (!q   || [e.equipment_id,e.name,e.responsible].join(" ").toLowerCase().includes(q)) &&
-    (!cat || e.category   === cat) &&
-    (!grp || e.responsible === grp)
-  );
-
-  document.getElementById("equipTableBody").innerHTML = rows.map((e,i) => `
-    <tr>
-      <td class="text-muted">${i+1}</td>
-      <td><code>${e.equipment_id||"–"}</code></td>
-      <td>${e.name||"–"}</td>
-      <td>${e.category||"–"}</td>
-      <td>${e.responsible||"–"}</td>
-      <td class="text-end">${fmtVal(e.unit_price)}</td>
-      <td>${e.received_date||"–"}</td>
-      <td>${statusBadge(e.status)}</td>
-      <td>
-        <button class="btn btn-sm btn-outline-primary py-0 me-1"
-                onclick="openEquipModal(${e._row})">
-          <i class="bi bi-pencil"></i>
-        </button>
-        <button class="btn btn-sm btn-outline-danger py-0"
-                onclick="confirmDelete('equip', ${e._row}, '${(e.name||"").replace(/'/g,"\\'")}')">
-          <i class="bi bi-trash"></i>
-        </button>
-      </td>
-    </tr>`).join("");
-  document.getElementById("equipCount").textContent = `แสดง ${rows.length} / ${S.equip.length} รายการ`;
-}
-
-// ── Media table ────────────────────────────────────────────
-function renderMedia() {
-  const q   = document.getElementById("mediaSearch").value.toLowerCase();
-  const grp = document.getElementById("mediaGroupFilter").value;
-  const st  = document.getElementById("mediaStatusFilter").value;
-
-  const grps = [...new Set(S.media.map(m=>m.group_raw).filter(Boolean))].sort();
-  populateSelect("mediaGroupFilter", grps, grp, "ทุกกลุ่มงาน");
-
-  const rows = S.media.filter(m =>
-    (!q   || [m.media_id,m.name].join(" ").toLowerCase().includes(q)) &&
+  S.mediaFiltered = S.media.filter(m =>
+    (!q   || [m.media_id, m.name].join(' ').toLowerCase().includes(q)) &&
     (!grp || m.group_raw === grp) &&
-    (!st  || m.status    === st)
-  );
+    (!st  || m.status    === st));
 
-  document.getElementById("mediaTableBody").innerHTML = rows.map((m,i) => `
+  renderMediaTable();
+}
+
+function renderMediaTable() {
+  const rows = S.mediaFiltered;
+  document.getElementById('mediaCount').textContent = rows.length.toLocaleString() + ' รายการ';
+  document.getElementById('mediaTableBody').innerHTML = rows.map(m => `
     <tr>
-      <td><code>${m.media_id||"–"}</code></td>
-      <td>${m.group_raw||"–"}</td>
-      <td>
-        ${m.link
-          ? `<a href="${m.link}" target="_blank" rel="noopener">${m.name||"–"}</a>`
-          : (m.name||"–")}
-      </td>
+      <td class="cell-id">${esc(m.media_id || '–')}</td>
+      <td>${esc(m.group_raw || '–')}</td>
+      <td>${m.link
+        ? `<a href="${esc(m.link)}" target="_blank" rel="noopener">${esc(m.name || '–')}</a>`
+        : esc(m.name || '–')}</td>
       <td class="text-center">${fmt(m.received)}</td>
       <td class="text-center">${fmt(m.issued)}</td>
       <td class="text-center fw-bold">${fmt(m.balance)}</td>
       <td>${statusBadge(m.status)}</td>
       <td>
         <div class="btn-group btn-group-sm">
-          <button class="btn btn-outline-success py-0"
-                  onclick="openStockInModal('${m.media_id}','${(m.name||"").replace(/'/g,"\\'")}')">
+          <button class="btn btn-outline-success py-0" title="รับเข้า"
+                  onclick="openStockInModal('${esc(m.media_id)}','${(m.name||'').replace(/'/g,"\\'")}')">
             <i class="bi bi-box-arrow-in-down"></i>
           </button>
-          <button class="btn btn-outline-warning py-0"
-                  onclick="openStockOutModal('${m.media_id}','${(m.name||"").replace(/'/g,"\\'")}')">
+          <button class="btn btn-outline-warning py-0" title="จ่ายออก"
+                  onclick="openStockOutModal('${esc(m.media_id)}','${(m.name||'').replace(/'/g,"\\'")}')">
             <i class="bi bi-box-arrow-up"></i>
           </button>
-          <button class="btn btn-outline-primary py-0"
+          <button class="btn btn-outline-primary py-0" title="แก้ไข"
                   onclick="openMediaModal(${m._row})">
             <i class="bi bi-pencil"></i>
           </button>
-          <button class="btn btn-outline-danger py-0"
-                  onclick="confirmDelete('media', ${m._row}, '${(m.name||"").replace(/'/g,"\\'")}')">
+          <button class="btn btn-outline-danger py-0" title="ลบ"
+                  onclick="confirmDelete('media',${m._row},'${(m.name||'').replace(/'/g,"\\'")}')">
             <i class="bi bi-trash"></i>
           </button>
         </div>
       </td>
-    </tr>`).join("");
-  document.getElementById("mediaCount").textContent = `แสดง ${rows.length} / ${S.media.length} รายการ`;
+    </tr>`).join('') || '<tr><td colspan="8" class="text-center p-4 text-muted">ไม่มีข้อมูล</td></tr>';
 }
 
-function populateSelect(id, options, selected, placeholder) {
-  const el = document.getElementById(id);
-  const cur = el.value || selected;
-  el.innerHTML = `<option value="">${placeholder}</option>` +
-    options.map(o => `<option${cur===o?" selected":""}>${o}</option>`).join("");
-}
+document.getElementById('mediaSearch').addEventListener('input', applyMediaFilter);
 
-// ── Live filters ───────────────────────────────────────────
-["equipSearch","equipCatFilter","equipGroupFilter"].forEach(id =>
-  document.getElementById(id).addEventListener("input", renderEquip));
-["mediaSearch","mediaGroupFilter","mediaStatusFilter"].forEach(id =>
-  document.getElementById(id).addEventListener("input", renderMedia));
-
-// ── Equipment CRUD ─────────────────────────────────────────
-let equipModal_, mediaModal_, stockInModal_, stockOutModal_, deleteModal_;
-window.addEventListener("DOMContentLoaded", () => {
-  equipModal_    = new bootstrap.Modal(document.getElementById("equipModal"));
-  mediaModal_    = new bootstrap.Modal(document.getElementById("mediaModal"));
-  stockInModal_  = new bootstrap.Modal(document.getElementById("stockInModal"));
-  stockOutModal_ = new bootstrap.Modal(document.getElementById("stockOutModal"));
-  deleteModal_   = new bootstrap.Modal(document.getElementById("deleteModal"));
-  loadAll();
-});
-
-function openEquipModal(rowIndex) {
-  document.getElementById("equipForm").reset();
-  document.getElementById("eRowIndex").value = rowIndex || "";
-  document.getElementById("equipModalTitle").textContent =
-    rowIndex ? "แก้ไขครุภัณฑ์" : "เพิ่มครุภัณฑ์";
-  if (rowIndex) {
-    const e = S.equip.find(x => x._row === rowIndex);
-    if (e) {
-      document.getElementById("eFsn").value          = e.fsn || "";
-      document.getElementById("eEquipId").value      = e.equipment_id || "";
-      document.getElementById("eGfId").value         = e.gf_id || "";
-      document.getElementById("eFiscalYear").value   = e.fiscal_year || "";
-      document.getElementById("eCategory").value     = e.category || "";
-      document.getElementById("eTags").value         = e.tags || "";
-      document.getElementById("eName").value         = e.name || "";
-      document.getElementById("eLocation").value     = e.location || "";
-      document.getElementById("eResponsible").value  = e.responsible || "";
-      document.getElementById("eBrand").value        = e.brand || "";
-      document.getElementById("eModel").value        = e.model || "";
-      document.getElementById("eUnitPrice").value    = e.unit_price || "";
-      document.getElementById("eUnit").value         = e.unit || "";
-      document.getElementById("eReceivedDate").value = e.received_date || "";
-      document.getElementById("eStatus").value       = e.status || "ปกติ";
-    }
-  }
-  equipModal_.show();
-}
-
-function saveEquip() {
-  const form = document.getElementById("equipForm");
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-  const rowIndex = document.getElementById("eRowIndex").value;
-  const data = {
-    fsn:           document.getElementById("eFsn").value,
-    equipment_id:  document.getElementById("eEquipId").value,
-    gf_id:         document.getElementById("eGfId").value,
-    fiscal_year:   document.getElementById("eFiscalYear").value,
-    category:      document.getElementById("eCategory").value,
-    tags:          document.getElementById("eTags").value,
-    name:          document.getElementById("eName").value,
-    location:      document.getElementById("eLocation").value,
-    responsible:   document.getElementById("eResponsible").value,
-    brand:         document.getElementById("eBrand").value,
-    model:         document.getElementById("eModel").value,
-    unit_price:    parseFloat(document.getElementById("eUnitPrice").value) || "",
-    unit:          document.getElementById("eUnit").value,
-    received_date: document.getElementById("eReceivedDate").value,
-    status:        document.getElementById("eStatus").value,
-  };
-  showLoading(true);
-  google.script.run
-    .withSuccessHandler(() => {
-      equipModal_.hide();
-      toast("บันทึกครุภัณฑ์สำเร็จ");
-      google.script.run
-        .withSuccessHandler(d => { S.equip = d; showLoading(false); renderEquip(); loadDashboard(); })
-        .getEquipment();
-    })
-    .withFailureHandler(e => { showLoading(false); toast(e.message, "danger"); })
-    .saveEquipment(data, rowIndex ? parseInt(rowIndex) : null);
-}
-
-// ── Media CRUD ─────────────────────────────────────────────
+// ── Media CRUD ─────────────────────────────────────────────────
 function openMediaModal(rowIndex) {
-  document.getElementById("mediaForm").reset();
-  document.getElementById("mRowIndex").value = rowIndex || "";
-  document.getElementById("mediaModalTitle").textContent =
-    rowIndex ? "แก้ไขสื่อ" : "เพิ่มสื่อ";
+  document.getElementById('mRowIndex').value  = rowIndex || '';
+  document.getElementById('mediaModalTitle').textContent = rowIndex ? '✏️ แก้ไขสื่อ' : '+ เพิ่มสื่อ';
+  ['mId','mGroup','mName','mUnit','mLink'].forEach(id => { document.getElementById(id).value = ''; });
   if (rowIndex) {
     const m = S.media.find(x => x._row === rowIndex);
     if (m) {
-      document.getElementById("mId").value    = m.media_id || "";
-      document.getElementById("mGroup").value = m.group_raw || "";
-      document.getElementById("mName").value  = m.name || "";
-      document.getElementById("mUnit").value  = m.unit || "";
-      document.getElementById("mLink").value  = m.link || "";
+      document.getElementById('mId').value    = m.media_id  || '';
+      document.getElementById('mGroup').value = m.group_raw || '';
+      document.getElementById('mName').value  = m.name      || '';
+      document.getElementById('mUnit').value  = m.unit      || '';
+      document.getElementById('mLink').value  = m.link      || '';
     }
   }
-  mediaModal_.show();
+  _mediaModal_.show();
 }
 
 function saveMedia() {
-  const form = document.getElementById("mediaForm");
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-  const rowIndex = document.getElementById("mRowIndex").value;
-  const data = {
-    media_id:  document.getElementById("mId").value,
-    group_raw: document.getElementById("mGroup").value,
-    name:      document.getElementById("mName").value,
-    unit:      document.getElementById("mUnit").value,
-    link:      document.getElementById("mLink").value,
-  };
-  showLoading(true);
+  const mid  = document.getElementById('mId').value.trim();
+  const name = document.getElementById('mName').value.trim();
+  if (!mid || !name) { toast('กรุณาระบุรหัสสื่อและชื่อสื่อ', 'warning'); return; }
+  const rowIndex = document.getElementById('mRowIndex').value;
   google.script.run
     .withSuccessHandler(() => {
-      mediaModal_.hide();
-      toast("บันทึกสื่อสำเร็จ");
-      google.script.run
-        .withSuccessHandler(d => { S.media = d; showLoading(false); renderMedia(); loadDashboard(); })
-        .getMediaItems();
+      _mediaModal_.hide();
+      toast(rowIndex ? 'แก้ไขสำเร็จ ✓' : 'เพิ่มสื่อสำเร็จ ✓');
+      loadMedia(); loadDashboard();
     })
-    .withFailureHandler(e => { showLoading(false); toast(e.message, "danger"); })
-    .saveMediaItem(data, rowIndex ? parseInt(rowIndex) : null);
+    .withFailureHandler(e => toast(e.message, 'danger'))
+    .saveMediaItem(
+      { media_id: mid, group_raw: document.getElementById('mGroup').value,
+        name, unit: document.getElementById('mUnit').value,
+        link: document.getElementById('mLink').value },
+      rowIndex ? parseInt(rowIndex) : null
+    );
 }
 
-// ── Stock modals ───────────────────────────────────────────
-function openStockInModal(mediaId, mediaName) {
-  document.getElementById("siMediaId").value  = mediaId;
-  document.getElementById("siMediaName").textContent = mediaName;
-  document.getElementById("siDate").value     = "";
-  document.getElementById("siDocNo").value    = "";
-  document.getElementById("siQty").value      = "";
-  document.getElementById("siNote").value     = "";
-  stockInModal_.show();
+// ── Stock modals ───────────────────────────────────────────────
+function openStockInModal(mediaId, name) {
+  document.getElementById('siId').value   = mediaId;
+  document.getElementById('siName').textContent = name;
+  ['siDate','siDocNo','siQty','siNote'].forEach(id => { document.getElementById(id).value = ''; });
+  _stockInModal_.show();
 }
 
 function confirmStockIn() {
-  const qty = parseInt(document.getElementById("siQty").value);
-  if (!qty || qty < 1) { toast("กรุณาระบุจำนวน", "warning"); return; }
-  const data = {
-    media_id: document.getElementById("siMediaId").value,
-    date:     document.getElementById("siDate").value,
-    doc_no:   document.getElementById("siDocNo").value,
-    qty,
-    note:     document.getElementById("siNote").value,
-  };
-  showLoading(true);
+  const qty = parseInt(document.getElementById('siQty').value);
+  if (!qty || qty < 1) { toast('กรุณาระบุจำนวน', 'warning'); return; }
   google.script.run
-    .withSuccessHandler(() => {
-      stockInModal_.hide();
-      toast("บันทึกรับเข้าสำเร็จ");
-      google.script.run
-        .withSuccessHandler(d => { S.media = d; showLoading(false); renderMedia(); loadDashboard(); })
-        .getMediaItems();
-    })
-    .withFailureHandler(e => { showLoading(false); toast(e.message, "danger"); })
-    .addStockIn(data);
+    .withSuccessHandler(() => { _stockInModal_.hide(); toast('บันทึกรับเข้าสำเร็จ ✓'); loadMedia(); loadDashboard(); })
+    .withFailureHandler(e => toast(e.message, 'danger'))
+    .addStockIn({ media_id: document.getElementById('siId').value,
+      date: document.getElementById('siDate').value,
+      doc_no: document.getElementById('siDocNo').value,
+      qty, note: document.getElementById('siNote').value });
 }
 
-function openStockOutModal(mediaId, mediaName) {
-  document.getElementById("soMediaId").value  = mediaId;
-  document.getElementById("soMediaName").textContent = mediaName;
-  document.getElementById("soDate").value      = "";
-  document.getElementById("soDocNo").value     = "";
-  document.getElementById("soRecipient").value = "";
-  document.getElementById("soQty").value       = "";
-  document.getElementById("soNote").value      = "";
-  stockOutModal_.show();
+function openStockOutModal(mediaId, name) {
+  document.getElementById('soId').value   = mediaId;
+  document.getElementById('soName').textContent = name;
+  ['soDate','soDocNo','soRecipient','soQty','soNote'].forEach(id => { document.getElementById(id).value = ''; });
+  _stockOutModal_.show();
 }
 
 function confirmStockOut() {
-  const qty = parseInt(document.getElementById("soQty").value);
-  if (!qty || qty < 1) { toast("กรุณาระบุจำนวน", "warning"); return; }
-  const data = {
-    media_id:  document.getElementById("soMediaId").value,
-    date:      document.getElementById("soDate").value,
-    doc_no:    document.getElementById("soDocNo").value,
-    recipient: document.getElementById("soRecipient").value,
-    qty,
-    note:      document.getElementById("soNote").value,
-  };
-  showLoading(true);
+  const qty = parseInt(document.getElementById('soQty').value);
+  if (!qty || qty < 1) { toast('กรุณาระบุจำนวน', 'warning'); return; }
   google.script.run
-    .withSuccessHandler(() => {
-      stockOutModal_.hide();
-      toast("บันทึกจ่ายออกสำเร็จ");
-      google.script.run
-        .withSuccessHandler(d => { S.media = d; showLoading(false); renderMedia(); loadDashboard(); })
-        .getMediaItems();
-    })
-    .withFailureHandler(e => { showLoading(false); toast(e.message, "danger"); })
-    .addStockOut(data);
+    .withSuccessHandler(() => { _stockOutModal_.hide(); toast('บันทึกจ่ายออกสำเร็จ ✓'); loadMedia(); loadDashboard(); })
+    .withFailureHandler(e => toast(e.message, 'danger'))
+    .addStockOut({ media_id: document.getElementById('soId').value,
+      date: document.getElementById('soDate').value,
+      doc_no: document.getElementById('soDocNo').value,
+      recipient: document.getElementById('soRecipient').value,
+      qty, note: document.getElementById('soNote').value });
 }
 
-// ── Delete ─────────────────────────────────────────────────
+// ── Delete ─────────────────────────────────────────────────────
 function confirmDelete(type, rowIndex, name) {
-  document.getElementById("deleteMsg").textContent =
-    `ต้องการลบ "${name}" ใช่หรือไม่? การลบนี้ไม่สามารถกู้คืนได้`;
-  const btn = document.getElementById("deleteConfirmBtn");
+  document.getElementById('deleteItemName').textContent = name || '–';
+  const btn = document.getElementById('deleteConfirmBtn');
+  btn.disabled = false; btn.textContent = 'ลบรายการ';
   btn.onclick = () => {
-    deleteModal_.hide();
-    showLoading(true);
-    const fn   = type === "equip" ? "deleteEquipment" : "deleteMediaItem";
-    const reload = type === "equip"
-      ? () => google.script.run
-          .withSuccessHandler(d => { S.equip = d; showLoading(false); renderEquip(); loadDashboard(); })
-          .getEquipment()
-      : () => google.script.run
-          .withSuccessHandler(d => { S.media = d; showLoading(false); renderMedia(); loadDashboard(); })
-          .getMediaItems();
+    btn.disabled = true; btn.textContent = '⏳ กำลังลบ...';
+    _deleteModal_.hide();
+    const fn     = type === 'equip' ? 'deleteEquipment' : 'deleteMediaItem';
+    const reload = type === 'equip'
+      ? () => { loadEquip(S.equipYear); loadDashboard(); }
+      : () => { loadMedia(); loadDashboard(); };
     google.script.run
-      .withSuccessHandler(() => { toast("ลบรายการสำเร็จ"); reload(); })
-      .withFailureHandler(e => { showLoading(false); toast(e.message, "danger"); })
+      .withSuccessHandler(() => { toast('ลบรายการสำเร็จ'); reload(); })
+      .withFailureHandler(e => toast(e.message, 'danger'))
       [fn](rowIndex);
   };
-  deleteModal_.show();
+  _deleteModal_.show();
+}
+
+// ── Export Excel ───────────────────────────────────────────────
+function exportExcel() {
+  const btn = document.getElementById('exportBtn');
+  btn.disabled = true; btn.innerHTML = '⏳ กำลัง Export...';
+  google.script.run
+    .withSuccessHandler(b64 => {
+      const bin = atob(b64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = `ครุภัณฑ์_${new Date().toISOString().slice(0,10)}.xlsx`;
+      a.click();
+      URL.revokeObjectURL(url);
+      toast('Export สำเร็จ ✓');
+      btn.disabled = false; btn.innerHTML = '<i class="bi bi-download me-1"></i>Export Excel';
+    })
+    .withFailureHandler(e => {
+      toast(e.message, 'danger');
+      btn.disabled = false; btn.innerHTML = '<i class="bi bi-download me-1"></i>Export Excel';
+    })
+    .exportEquipExcel();
+}
+
+// ── Dashboard ──────────────────────────────────────────────────
+function loadDashboard() {
+  google.script.run
+    .withSuccessHandler(d => {
+      document.getElementById('dEquipCount').textContent = fmt(d.equipCount);
+      document.getElementById('dTotalValue').textContent = fmtVal(d.totalValue);
+      document.getElementById('dMediaCount').textContent = fmt(d.mediaCount);
+      document.getElementById('dAlertCount').textContent = `${fmt(d.outOfStock)} / ${fmt(d.lowStock)}`;
+
+      const cats = Object.entries(d.equipByCat).sort((a,b) => b[1] - a[1]);
+      buildChart('chartEquipCat', 'doughnut',
+        cats.map(e => e[0]), cats.map(e => e[1]), PALETTE.slice(0, cats.length));
+
+      buildChart('chartMediaStatus', 'doughnut',
+        ['มีเหลือ','ใกล้หมด','หมด'],
+        [d.mediaStatus['มีเหลือ']||0, d.mediaStatus['ใกล้หมด']||0, d.mediaStatus['หมด']||0],
+        ['#1e6f3e','#edc948','#e15759']);
+
+      const grps = Object.entries(d.equipByGroup).sort((a,b) => b[1] - a[1]).slice(0, 10);
+      buildChart('chartEquipGroup', 'bar',
+        grps.map(e => e[0].replace('กลุ่ม','')),
+        grps.map(e => e[1]), PALETTE);
+
+      const mg = Object.entries(d.mediaByGroup).sort((a,b) => b[1] - a[1]);
+      buildChart('chartMediaGroup', 'bar',
+        mg.map(e => e[0]), mg.map(e => e[1]), PALETTE);
+    })
+    .withFailureHandler(e => console.error('dashboard:', e))
+    .getDashboardData();
 }
 </script>
 </body>
