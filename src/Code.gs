@@ -74,12 +74,42 @@ function ensureSheetWb_(wb, name, headers) {
 function sheetData_(sh) {
   const vals = sh.getDataRange().getValues();
   if (vals.length < 2) return [];
-  const headers = vals[0];
+  const headers = vals[0].map(h => String(h).trim());  // trim to handle CSV import artifacts
   return vals.slice(1).map((row, i) => {
     const obj = { _row: i + 2 };
-    headers.forEach((h, j) => { obj[h] = row[j] ?? ""; });
+    headers.forEach((h, j) => { if (h) obj[h] = row[j] ?? ""; });
     return obj;
   });
+}
+
+// ── DEBUG helper — run this in GAS editor to diagnose sheet issues ──
+function debugSheets() {
+  const wb  = ss_();
+  const out = {};
+
+  // Equipment
+  try {
+    const sh = getEquipSheet_();
+    const h  = getHeaders_(sh);
+    out.equip = { found: true, lastRow: sh.getLastRow(), headers: h };
+  } catch(e) {
+    out.equip = { found: false, error: e.message };
+  }
+
+  // Media sheets
+  for (const name of [MEDIA_TAB, IN_TAB, OUT_TAB]) {
+    const sh = wb.getSheetByName(name);
+    if (sh) {
+      const h = sh.getRange(1, 1, 1, sh.getLastColumn()).getValues()[0]
+                  .map(v => String(v));
+      out[name] = { found: true, lastRow: sh.getLastRow(), headers: h };
+    } else {
+      out[name] = { found: false };
+    }
+  }
+
+  Logger.log(JSON.stringify(out, null, 2));
+  return out;
 }
 
 // Convert CE date → BE display string ("D/M/YYYY")
