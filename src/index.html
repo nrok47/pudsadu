@@ -87,7 +87,8 @@
     border: 1.5px solid #dee2e6; font-family: inherit; }
 
   /* chart */
-  .chart-wrap { position: relative; height: 230px; }
+  .chart-wrap      { position: relative; height: 230px; }
+  .chart-wrap-tall { position: relative; height: 400px; }
 
   /* loader */
   #loadingOverlay { position: fixed; inset: 0; background: rgba(255,255,255,.75);
@@ -253,6 +254,55 @@
 
   <!-- ══ MEDIA ══ -->
   <div id="tabMedia" class="d-none">
+
+    <!-- ── Weekly Stock Report ── -->
+    <div id="mediaReportSection" class="mb-3">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <h6 class="fw-bold mb-0">
+          <i class="bi bi-clipboard-data me-1" style="color:var(--primary)"></i>รายงานยอดคงเหลือประจำสัปดาห์
+          <small class="text-muted fw-normal ms-2" id="mediaReportDate"></small>
+        </h6>
+        <button class="btn btn-sm btn-outline-secondary" onclick="toggleMediaReport()" title="ย่อ/ขยาย">
+          <i class="bi bi-chevron-up" id="mediaReportToggleIcon"></i>
+        </button>
+      </div>
+      <div id="mediaReportBody">
+        <div class="row g-2 mb-3">
+          <div class="col-6 col-md-3">
+            <div class="card stat-card bg-white p-3">
+              <div class="stat-label">รายการทั้งหมด</div>
+              <div class="stat-value" style="color:var(--primary)" id="mrTotal">–</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card stat-card bg-white p-3">
+              <div class="stat-label">มีคงเหลือ (รายการ)</div>
+              <div class="stat-value" style="color:#1a7f37" id="mrHasStock">–</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card stat-card bg-white p-3">
+              <div class="stat-label">ใกล้หมด (รายการ)</div>
+              <div class="stat-value" style="color:#9a6700" id="mrLow">–</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card stat-card bg-white p-3">
+              <div class="stat-label">ยอดคงเหลือรวม (ชิ้น)</div>
+              <div class="stat-value" style="color:var(--primary)" id="mrBalTotal">–</div>
+            </div>
+          </div>
+        </div>
+        <div class="card border-0 shadow-sm p-3">
+          <div class="fw-bold mb-1 small" style="color:#1a7f37">
+            <i class="bi bi-bar-chart-steps me-1"></i>รายการที่ยังมีคงเหลือ — มาเบิกของไปใช้ได้เลย!
+          </div>
+          <div class="text-muted mb-2" style="font-size:.78rem">เรียงจากมากไปน้อย · สีเหลือง = ใกล้หมด</div>
+          <div class="chart-wrap-tall"><canvas id="chartMediaBalance"></canvas></div>
+        </div>
+      </div>
+    </div>
+
     <div class="toolbar">
       <div class="d-flex gap-2 flex-wrap align-items-center">
         <button class="btn btn-sm fw-600" style="background:var(--primary);color:#fff" onclick="openMediaModal()">
@@ -906,7 +956,7 @@ function loadMedia() {
   document.getElementById('mediaTableBody').innerHTML =
     '<tr><td colspan="8" class="text-center p-5 text-muted"><div class="spinner-ring mx-auto mb-2"></div>กำลังโหลด...</td></tr>';
   google.script.run
-    .withSuccessHandler(rows => { S.media = rows; applyMediaFilter(); })
+    .withSuccessHandler(rows => { S.media = rows; applyMediaFilter(); renderMediaReport(); })
     .withFailureHandler(e => {
       document.getElementById('mediaTableBody').innerHTML =
         `<tr><td colspan="8" class="text-center p-4 text-danger">
@@ -976,6 +1026,59 @@ function renderMediaTable() {
 }
 
 document.getElementById('mediaSearch').addEventListener('input', applyMediaFilter);
+
+// ── Media weekly report ────────────────────────────────────────
+let _mediaReportCollapsed = false;
+
+function toggleMediaReport() {
+  _mediaReportCollapsed = !_mediaReportCollapsed;
+  document.getElementById('mediaReportBody').classList.toggle('d-none', _mediaReportCollapsed);
+  document.getElementById('mediaReportToggleIcon').className =
+    _mediaReportCollapsed ? 'bi bi-chevron-down' : 'bi bi-chevron-up';
+}
+
+function renderMediaReport() {
+  const items = S.media;
+  if (!items.length) return;
+
+  document.getElementById('mrTotal').textContent    = items.length.toLocaleString();
+  document.getElementById('mrHasStock').textContent = items.filter(m => m.balance > 0).length.toLocaleString();
+  document.getElementById('mrLow').textContent      = items.filter(m => m.status === 'ใกล้หมด').length.toLocaleString();
+  document.getElementById('mrBalTotal').textContent = items.reduce((s, m) => s + (m.balance || 0), 0).toLocaleString();
+
+  const now = new Date();
+  document.getElementById('mediaReportDate').textContent =
+    `ข้อมูล ณ ${now.getDate()}/${now.getMonth()+1}/${now.getFullYear()+543}`;
+
+  const sorted = [...items]
+    .filter(m => m.balance > 0)
+    .sort((a, b) => b.balance - a.balance)
+    .slice(0, 20);
+
+  const ctx = document.getElementById('chartMediaBalance').getContext('2d');
+  if (S.charts['chartMediaBalance']) S.charts['chartMediaBalance'].destroy();
+  S.charts['chartMediaBalance'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: sorted.map(m => m.name),
+      datasets: [{
+        data: sorted.map(m => m.balance),
+        backgroundColor: sorted.map(m => m.status === 'ใกล้หมด' ? '#edc948' : '#1e6f3e'),
+        borderWidth: 0,
+      }],
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { font: { family: 'Sarabun' } }, beginAtZero: true },
+        y: { ticks: { font: { family: 'Sarabun', size: 11 } } },
+      },
+    },
+  });
+}
 
 // ── Media CRUD ─────────────────────────────────────────────────
 function openMediaModal(rowIndex) {
