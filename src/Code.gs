@@ -4,7 +4,7 @@
 // Equipment GID: 1500564948
 // ============================================================
 
-const SS_ID     = "12t737wkzyAW9UVUlN4XJS9UpGUdn3b5GdO2tMiJKA0A";
+const SS_ID     = "1XFU13CiJzectMI0Do7R07Su9OEabBiFR780-_b8dmk0";
 const EQUIP_GID = 1500564948;   // sheet ID from original project
 
 const MEDIA_TAB = "คลังสื่อ";
