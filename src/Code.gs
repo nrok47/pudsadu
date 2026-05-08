@@ -58,7 +58,10 @@ function getHeaders_(sh) {
 }
 
 function ensureSheet_(name, headers) {
-  const wb = ss_();
+  return ensureSheetWb_(ss_(), name, headers);
+}
+
+function ensureSheetWb_(wb, name, headers) {
   let sh = wb.getSheetByName(name);
   if (!sh) {
     sh = wb.insertSheet(name);
@@ -185,9 +188,11 @@ function exportEquipExcel() {
 
 // ── MEDIA ITEMS ──────────────────────────────────────────────
 function getMediaItems() {
-  const mediaSh = ensureSheet_(MEDIA_TAB, MEDIA_HEADERS);
-  const inSh    = ensureSheet_(IN_TAB,    IN_HEADERS);
-  const outSh   = ensureSheet_(OUT_TAB,   OUT_HEADERS);
+  // Open spreadsheet once and reuse — avoids 3 separate API calls
+  const wb      = ss_();
+  const mediaSh = ensureSheetWb_(wb, MEDIA_TAB, MEDIA_HEADERS);
+  const inSh    = ensureSheetWb_(wb, IN_TAB,    IN_HEADERS);
+  const outSh   = ensureSheetWb_(wb, OUT_TAB,   OUT_HEADERS);
 
   const items = sheetData_(mediaSh).map(r => ({
     _row:      r._row,

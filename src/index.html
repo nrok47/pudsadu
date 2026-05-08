@@ -903,9 +903,19 @@ function saveEquip() {
 
 // ── Media loading ──────────────────────────────────────────────
 function loadMedia() {
+  document.getElementById('mediaTableBody').innerHTML =
+    '<tr><td colspan="8" class="text-center p-5 text-muted"><div class="spinner-ring mx-auto mb-2"></div>กำลังโหลด...</td></tr>';
   google.script.run
     .withSuccessHandler(rows => { S.media = rows; applyMediaFilter(); })
-    .withFailureHandler(e => toast(e.message, 'danger'))
+    .withFailureHandler(e => {
+      document.getElementById('mediaTableBody').innerHTML =
+        `<tr><td colspan="8" class="text-center p-4 text-danger">
+          ❌ โหลดข้อมูลไม่สำเร็จ: <strong>${esc(e.message)}</strong><br>
+          <small class="text-muted">ตรวจสอบว่า header row ในชีต "คลังสื่อ" ถูกต้อง:<br>
+          รหัสสื่อ | กลุ่มงาน | ชื่อสื่อ | หน่วย | ลิงก์</small>
+        </td></tr>`;
+      toast(e.message, 'danger');
+    })
     .getMediaItems();
 }
 
