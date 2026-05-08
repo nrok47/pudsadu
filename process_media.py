@@ -125,10 +125,11 @@ def parse_stock_in_rows(ws) -> list[dict]:
 def parse_stock_out(ws) -> dict[str, int]:
     totals: dict[str, int] = {}
     for row in ws.iter_rows(min_row=3, values_only=True):
-        code = clean_str(row[4])
-        qty  = parse_quantity(row[6])
+        code   = clean_str(row[4])
+        qty    = parse_quantity(row[6])
         status = clean_str(row[8]) or ""
-        if code and qty and status != "ยกเลิก":
+        note   = clean_str(row[9]) or ""
+        if code and qty and status != "ยกเลิก" and "ยอดเบิกสะสม" not in note:
             totals[code] = totals.get(code, 0) + qty
     return totals
 
@@ -140,13 +141,14 @@ def parse_stock_out_rows(ws) -> list[dict]:
     for row in ws.iter_rows(min_row=3, values_only=True):
         code = clean_str(row[4])
         qty  = parse_quantity(row[6])
-        if not code or not qty:
+        note = clean_str(row[9]) or ""
+        if not code or not qty or "ยอดเบิกสะสม" in note:
             continue
         rows.append({
             "วันที่":        clean_str(row[1]) or "",
             "เลขที่เอกสาร": clean_str(row[2]) or "",
             "ผู้รับ":        clean_str(row[3]) or "",
-            "หมายเหตุ":      clean_str(row[9]) or "",
+            "หมายเหตุ":      note,
             "รหัสสื่อ":      code,
             "จำนวน":         qty,
             "สถานะ":         clean_str(row[8]) or "ปกติ",
