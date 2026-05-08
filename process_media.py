@@ -130,7 +130,7 @@ def main():
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump(items, f, ensure_ascii=False, indent=2)
 
-    # --- Write CSV ---
+    # --- Write CSV (full — for analysis) ---
     out_csv = Path("data/media.csv")
     fields = ["media_id", "department", "group_raw", "name", "unit",
               "received", "issued", "balance", "status", "link"]
@@ -138,6 +138,20 @@ def main():
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
         w.writeheader()
         w.writerows(items)
+
+    # --- Write import CSV (5 columns, Thai headers — ready for Google Sheets) ---
+    out_import = Path("data/media_import.csv")
+    with open(out_import, "w", newline="", encoding="utf-8-sig") as f:
+        w = csv.writer(f)
+        w.writerow(["รหัสสื่อ", "กลุ่มงาน", "ชื่อสื่อ", "หน่วย", "ลิงก์"])
+        for item in items:
+            w.writerow([
+                item["media_id"],
+                item["group_raw"],
+                item["name"],
+                item["unit"] or "",
+                item["link"] or "",
+            ])
 
     # --- Write group mapping ---
     group_map = {
@@ -157,6 +171,7 @@ def main():
 
     print(f"Done:")
     print(f"  {len(items)} media items  → {out_json}, {out_csv}")
+    print(f"  import-ready CSV        → {out_import}  ← ใช้ไฟล์นี้ import เข้า Google Sheets")
     print(f"  group map               → {out_map}")
     total_bal = sum(i["balance"] for i in items)
     out_items = sum(1 for i in items if i["status"] == "หมด")
