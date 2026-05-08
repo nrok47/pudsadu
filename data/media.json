@@ -7,9 +7,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 2000,
-    "issued": 2000,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 2000,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M002",
@@ -19,9 +19,9 @@
     "unit": "แผ่น",
     "link": null,
     "received": 120,
-    "issued": 120,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 120,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M003",
@@ -31,9 +31,9 @@
     "unit": "เล่ม",
     "link": "https://drive.google.com/file/d/1h3FBZj8eQjdteWV1bvaBAgkRI8TAdSj_/view?usp=drive_link",
     "received": 1200,
-    "issued": 1200,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 1200,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M004",
@@ -43,9 +43,9 @@
     "unit": "เล่ม",
     "link": "https://drive.google.com/file/d/1h3FBZj8eQjdteWV1bvaBAgkRI8TAdSj_/view?usp=drive_link",
     "received": 1200,
-    "issued": 1200,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 1200,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M005",
@@ -115,8 +115,8 @@
     "unit": "เล่ม",
     "link": null,
     "received": 21,
-    "issued": 15,
-    "balance": 6,
+    "issued": 0,
+    "balance": 21,
     "status": "มีเหลือ"
   },
   {
@@ -139,9 +139,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 100,
-    "issued": 100,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 100,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M013",
@@ -187,9 +187,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 40,
-    "issued": 40,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 40,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M017",
@@ -211,9 +211,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 200,
-    "issued": 200,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 200,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M019",
@@ -271,8 +271,8 @@
     "unit": "เล่ม",
     "link": null,
     "received": 20,
-    "issued": 10,
-    "balance": 10,
+    "issued": 0,
+    "balance": 20,
     "status": "มีเหลือ"
   },
   {
@@ -451,9 +451,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 666,
-    "issued": 666,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 666,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M039",
@@ -487,9 +487,9 @@
     "unit": "แผ่น",
     "link": null,
     "received": 800,
-    "issued": 800,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 800,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M042",
@@ -499,9 +499,9 @@
     "unit": "แผ่น",
     "link": null,
     "received": 1600,
-    "issued": 1600,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 1600,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M043",
@@ -679,8 +679,8 @@
     "unit": "เล่ม",
     "link": null,
     "received": 132,
-    "issued": 25,
-    "balance": 107,
+    "issued": 0,
+    "balance": 132,
     "status": "มีเหลือ"
   },
   {
@@ -991,9 +991,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 60,
-    "issued": 60,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 60,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M084",
@@ -1003,9 +1003,9 @@
     "unit": "กล่อง",
     "link": null,
     "received": 20,
-    "issued": 20,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 20,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M085",
@@ -1015,9 +1015,9 @@
     "unit": "แผ่น",
     "link": null,
     "received": 95,
-    "issued": 95,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 95,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M086",
@@ -1027,9 +1027,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 7,
-    "issued": 7,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 7,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M087",
@@ -1039,9 +1039,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 500,
-    "issued": 500,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 500,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M088",
@@ -1051,8 +1051,8 @@
     "unit": "แผ่น",
     "link": null,
     "received": 800,
-    "issued": 120,
-    "balance": 680,
+    "issued": 0,
+    "balance": 800,
     "status": "มีเหลือ"
   },
   {
@@ -1063,9 +1063,9 @@
     "unit": "ชุด",
     "link": null,
     "received": 20,
-    "issued": 20,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 20,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M090",
@@ -1075,9 +1075,9 @@
     "unit": "อัน",
     "link": null,
     "received": 18,
-    "issued": 18,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 18,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M091",
@@ -1087,9 +1087,9 @@
     "unit": "แผ่น",
     "link": null,
     "received": 1500,
-    "issued": 1500,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 1500,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M092",
@@ -1099,8 +1099,8 @@
     "unit": "แผ่น",
     "link": null,
     "received": 800,
-    "issued": 200,
-    "balance": 600,
+    "issued": 0,
+    "balance": 800,
     "status": "มีเหลือ"
   },
   {
@@ -1123,9 +1123,9 @@
     "unit": "ชุด",
     "link": null,
     "received": 60,
-    "issued": 60,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 60,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M095",
@@ -1135,9 +1135,9 @@
     "unit": "เล่ม",
     "link": null,
     "received": 200,
-    "issued": 200,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 200,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M096",
@@ -1147,9 +1147,9 @@
     "unit": "อัน",
     "link": null,
     "received": 840,
-    "issued": 840,
-    "balance": 0,
-    "status": "หมด"
+    "issued": 0,
+    "balance": 840,
+    "status": "มีเหลือ"
   },
   {
     "media_id": "M097",
